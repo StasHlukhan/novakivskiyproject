@@ -1,0 +1,66 @@
+.footer{
+    height: 200px;
+    background-color: white;
+    box-shadow: 0px -8px 36px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+.logo_side{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+.logo_foot{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FF0000;
+    
+}
+.logo_side p{
+    margin: 0 50px 0 0;
+}
+.logo_info{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    width: 230px;
+}
+.line_foot{
+    height: 70px;
+    width: 2px;
+    background-color:black ;
+    opacity: 0.5;
+    margin-right: 20px;
+    
+}
+.nav_side{
+    display: flex;
+    flex-direction: row;
+}
+.nav_side svg{
+    margin-right: 10px;
+}
+.nav_side p{
+    margin-right: 50px;
+}
+.email{
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+}
+.phone_num{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.instagram{
+    margin-right: 30px;
+}

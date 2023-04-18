@@ -12,6 +12,9 @@
     flex-direction: column;
     align-items: center;
 }
+.facts7_main p{
+    margin: 0;
+}
 .facts7_title{
     width: 1200px;
     font-family: 'Montserrat';

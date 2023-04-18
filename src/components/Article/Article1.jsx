@@ -8,13 +8,14 @@ import Gera from '../../img/Gera.png'
 import Voina from '../../img/voina.png'
 import Probud from '../../img/probud.png'
 import MorePosts from '../MorePosts/MorePosts'
+import NavBar from '../NavBar/NavBar'
 function Article1() {
   useEffect(()=>{
     window.scrollTo(0,0);
   })
   return (
     <div>
-      <header style={{height:80,background:'blue'}}></header>
+      
       <div className="facts7">
         <div className="facts7_main">
 

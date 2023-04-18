@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Exhibition from '../../img/Exhibition.png'
 import Pagination from '../Pagination/Pagination'
 import ArtGalleryList from './ArtGalleryList'
-
+import NavBar from '../NavBar/NavBar'
+import Footer from '../Footer/Footer'
 import './ArtGallery.css'
 const ArtGallery = () => {
   const [currentPage,setCurrentPage] = useState(1)
@@ -52,21 +53,22 @@ const [active,setActive]= useState(false)
   return (
     
     <div>
-      <div style={{height:90, background:'black'}}></div>
+      
       <div  className="art_gallery">
         <div  className="art_gallery_info">
           <h2>Арт галерея</h2>
           <ArtGalleryList arts={currentArt} handleClick={handleClick} ></ArtGalleryList>
-      {selectedImage && (
-        <div className="modal-overlay" onClick={handleClose}>
-          <div className="modal">
-            <img src={selectedImage.img} alt={selectedImage.alt} />
+          {selectedImage && (
+          <div className="modal_overlay" onClick={handleClose}>
+            <div className="modall">
+              <img src={selectedImage.img} alt={selectedImage.alt} />
+            </div>
           </div>
-        </div>
-      )}
+            )}
             <Pagination active={active}  paginate={paginate} totalArts={arts.length} artsPerPage={artsPerPage} ></Pagination>
         </div>
       </div>
+      
     </div>
   )
 }

@@ -7,11 +7,15 @@ import Article3 from '../Article/Article3';
 import MapRoad from '../MapRoad/MapRoad';
 import Donate from '../Donate/Donate';
 import ArtGallery from '../ArtGallery/ArtGallery';
+import MainPage from '../MainPage/MainPage';
+import NavBar from '../NavBar/NavBar';
+import Footer from '../Footer/Footer';
 function AppRouter() {
   return (
     <div>
+        {/* <NavBar></NavBar> */}
         <Routes>
-            <Route path='' element={<MapRoad></MapRoad>}></Route>
+            <Route path='' element={<MainPage></MainPage>}></Route>
             <Route path='/posts' element={<PostsPage></PostsPage>}></Route>
             <Route  path='/posts/1' element={<Article1></Article1>}></Route>
             <Route  path='/posts/2' element={<Article2></Article2>}></Route>
@@ -20,6 +24,7 @@ function AppRouter() {
             <Route  path='/art_gallery' element={<ArtGallery></ArtGallery>}></Route>
 
         </Routes>
+        {/* <Footer></Footer> */}
     </div>
   )
 }

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import small_kitaec from '../../img/small_kitaec.png'
 import MorePosts from '../MorePosts/MorePosts'
 import './Article.css'
+import NavBar from '../NavBar/NavBar'
 function Article2() {
   useEffect(()=>{
     window.scrollTo(0,0);
@@ -9,7 +10,7 @@ function Article2() {
   return (
 
     <div>
-        <header style={{height:80,background:'blue'}}></header>
+        
         <div className="Article2">
             <div className="facts7_main">
 

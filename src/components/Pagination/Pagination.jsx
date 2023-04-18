@@ -19,7 +19,7 @@ const Pagination = ({totalArts,artsPerPage,paginate,active}) => {
         <div className="page-item" key={number}>
           <div
             onClick={() => paginate(number)}
-            className={active === false && number === 1 ? "page-link-act" : active === number ? "page-link-act" : "page-link"}
+            className={active === false && number === 1 ? "page_link-act" : active === number ? "page_link-act" : "page_link"}
           >
             {number}
           </div>

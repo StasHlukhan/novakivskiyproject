@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PostFilter from './PostFilter';
 import PostList from './PostList';
 import './Posts.css'
-
+import NavBar from '../NavBar/NavBar';
 const PostsPage = () => {
 
   
@@ -27,7 +27,7 @@ const PostsPage = () => {
 
   return(
     <div>
-      <header style={{height:80,background:'blue'}}></header>
+      
         <div className="post_page">
           <h2 className='post_title'>Статті</h2>
           <PostFilter filterPosts={filterPosts}></PostFilter>

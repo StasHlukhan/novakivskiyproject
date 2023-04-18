@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montserrat:ital,wght@0,300;0,400;1,200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
 .number{
     font-size: 200px;
     height: 100px;
@@ -32,6 +33,8 @@
     justify-content: space-around;
     font-size: 20px;
   }
+  
+ 
   .page2{
     height: 1000px;
     margin-top: 150px;
@@ -50,16 +53,8 @@
     justify-content: space-around;
     font-size: 20px;
   }
-  .left_side{
-    height: 1000px;
-    width: 500px;
-
-  }
-  .right_side{
-    height: 1000px;
-    width: 480px;
-
-  }
+  
+  
   .img{
     display: flex;
     flex-direction: column;
@@ -165,4 +160,57 @@
 }
 .margin_bot{
   margin-bottom: 400px;
+}
+@media (min-width: 1000px){
+  .left_side{
+      height: 1000px;
+      width: 500px;
+      
+      
+    }
+    .right_side{
+      height: 1000px;
+      width: 480px; 
+    }
+}
+@media (max-width: 1000px){
+  .left_side{
+      height: 500px;
+      width: 200px;
+      font-size: 7px;
+    }
+    .right_side{
+      height: 500px;
+      width: 200px; 
+      font-size: 7px;
+    }
+    .img img{
+      height: 120px;
+      width: 100px;
+    }
+    .number{
+      font-size: 56px;
+    }
+    .my-class{
+      height: 100px;
+      position: fixed;
+      top: 200px ;
+      left: 200px;
+      
+      transition: 1.5s;
+      opacity: 1;
+      
+      }
+      .line{
+      position: fixed;
+      top: 70%;
+      left: 15%;
+      transition: 1s;
+      opacity: 0;
+      color: black;
+      }
+      .caption{
+        font-size: 10px;
+        width: 100px;
+      }
 }

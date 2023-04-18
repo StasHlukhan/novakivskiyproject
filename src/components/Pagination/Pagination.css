@@ -1,7 +1,7 @@
 
 
 
-.page-link{
+.page_link{
     width: 40px;
     height: 40px;
     background: white;
@@ -18,8 +18,9 @@
     border-radius: 5.36px;
     margin-right: 5px;
     cursor: pointer;
+    color: #000;
 }
-.page-link-act{
+.page_link-act{
     border-radius: 5.36px;
     width: 40px;
     height: 40px;

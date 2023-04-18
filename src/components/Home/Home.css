@@ -1,0 +1,76 @@
+.carousel-caption {
+    
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+    bottom: 15%;
+  }
+  .carousel-caption p{
+    width: 290px;
+  }
+  .caption_line{
+    height: 130px;
+    width: 2px;
+    background-color: white;
+  }
+  .caption_full{
+    display: flex;
+  }
+  .caption_full .caption_line{
+    margin-right: 50px;
+  }
+  
+  .carousel-control-next-icon{
+    background-image: url(../../img/carousel_img/chevron-right.png);
+    height: 150px;
+    width: 150px;
+  }
+  .carousel-control-prev-icon{
+    background-image: url(../../img/carousel_img/chevron-left.png);
+    height: 150px;
+    width: 150px;
+  }
+  .carousel-item img{
+    height: 1000px;
+  }
+
+  .hero{
+    position: absolute;
+    left: 200px;
+    top: 300px;
+    z-index: 3;
+    font-family: 'Montserrat';
+    font-style: normal;
+  }
+  .hero h2{
+    width: 868px;
+  height: 268px;
+  font-weight: 700;
+  font-size: 110px;
+  line-height: 134px;
+  color: #FFFFFF;
+  }
+  .hero_info{
+    width: 728px;
+    height: 128px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+  }
+  .hero_buttons a{
+    color: white;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  margin: 0;
+  text-decoration: none;
+  }

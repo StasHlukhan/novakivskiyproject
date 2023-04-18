@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import MorePosts from '../MorePosts/MorePosts'
 import Video1 from '../VideoPlayer/Video1'
+import NavBar from '../NavBar/NavBar';
 
 function Article3() {
     useEffect(()=>{
@@ -8,7 +9,7 @@ function Article3() {
       })
   return (
     <div>
-        <header style={{height:80,background:'blue'}}></header>
+        
      <div className="Article3">
         <div className="facts7_main">
 

@@ -44,6 +44,7 @@ import { useRef } from "react";
 import { useScrollAnim } from "../../hooks/useScrollAnim";
 import { useNumber } from "../../hooks/useNumber";
 import TimeLine from "../../components/TimeLine/TimeLine";
+import NavBar from "../NavBar/NavBar";
  
 
 function MapRoad() {
@@ -52,19 +53,19 @@ function MapRoad() {
   const executeScroll = () => myRef.current.scrollIntoView()  
   
  
-  const [scrollAnim,scrolledState] = useScrollAnim();
-  const [numberGrow,numberState] = useNumber()
+  // const [scrollAnim,scrolledState] = useScrollAnim();
+  // const [numberGrow,numberState] = useNumber()
   
-  useEffect(() => {
-    numberGrow()
-  }, []);
+  // useEffect(() => {
+  //   numberGrow()
+  // }, []);
 
   
 
-  useEffect(() => {
-    scrollAnim()
+  // useEffect(() => {
+  //   scrollAnim()
     
-  }, []);
+  // }, []);
 
 
   
@@ -74,11 +75,13 @@ function MapRoad() {
 
   return (
     <div>
-      <div style={{height:1080,background:"black"}}></div>
-      <TimeLine></TimeLine>
+      
+      
+      
         <div  className="first_period">
           <div className="center">
-            <div className={ scrolledState ? "my-class" : "line"}><span className='number' >{numberState}</span></div>
+            {/* <div className={ scrolledState ? "my-class" : "line"}><span className='number' >{numberState}</span></div> */}
+            <div className="my-class"><span className='number' >1872</span></div>
           </div>
           <div className="page">
             <div className="left_side">

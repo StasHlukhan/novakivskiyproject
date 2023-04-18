@@ -1,0 +1,17 @@
+.myBtn{
+    font-size: 30px;
+
+    text-align: center;
+    padding: 15px 65px ;
+    margin-left:20px;
+    color: white;
+    font-size: 14px;
+    background: #A30000;
+    border-radius: 37px;
+    border: none;
+    transition: 0.4s;
+}
+.myBtn:hover{
+    background: #660000;
+    transition: 0.4s;
+}
