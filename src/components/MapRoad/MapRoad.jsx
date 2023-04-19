@@ -138,7 +138,7 @@ function MapRoad() {
           </div>
         </div>
 
-        <div className="title">
+        {/* <div className="title">
           <div className="main_title show_up element-animation"><h2>Krakow Academy of Fine Arts.</h2></div>
         </div>
 
@@ -484,7 +484,7 @@ function MapRoad() {
               <p className="high_margin_top">The Gordinski family presented the National Museum with a monumental graphic work "The Prince of the Church", which is a later version of the previously discovered "Moses".</p>
             </div>
           </div>
-        </div>
+        </div> */}
         <div style={{height:2000}}></div>
     </div>
   )
