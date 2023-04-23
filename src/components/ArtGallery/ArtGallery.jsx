@@ -32,13 +32,16 @@ const ArtGallery = () => {
 
 ])
 const [active,setActive]= useState(false)
-
+useEffect(()=>{
+  window.scrollTo(0,0);
+})
   const lastArtIndex = currentPage * artsPerPage
   const firstArtIndex = lastArtIndex - artsPerPage
   const currentArt = arts.slice(firstArtIndex,lastArtIndex)
     const paginate = pageNumber => {
       setCurrentPage(pageNumber)
       setActive(pageNumber)
+      window.scrollTo({ behavior: 'smooth', top: 0 })
     }
 
      const [selectedImage, setSelectedImage] = useState(null);

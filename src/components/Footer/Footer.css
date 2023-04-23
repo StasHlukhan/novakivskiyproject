@@ -7,6 +7,7 @@
     align-items: center;
     font-family: 'Montserrat';
     font-style: normal;
+    
 }
 .logo_side{
 
@@ -14,6 +15,7 @@
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    
 }
 .logo_foot{
     font-weight: 700;
@@ -44,6 +46,7 @@
 .nav_side{
     display: flex;
     flex-direction: row;
+    
 }
 .nav_side svg{
     margin-right: 10px;
@@ -64,3 +67,59 @@
 .instagram{
     margin-right: 30px;
 }
+.socials{
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width: 1000px){
+    .footer{
+        
+        flex-direction: column;
+        height: 400px;
+        box-shadow: 0 0 0 0;
+    }
+    
+}
+@media (max-width: 600px){
+    .footer{
+        flex-direction: column;
+    }
+    .logo_info{
+        margin-top: 30px;
+    }
+    .logo_side{
+        flex-direction: column;
+
+    }
+    .logo_side p{
+        margin-bottom: 50px;
+        margin-right: 0;
+    }
+    .line_foot{
+        width: 300px;
+        height: 2px;
+        background-color:black ;
+        margin-right: 0;
+    }
+    .nav_side{
+        flex-direction: column-reverse;
+    }
+    .socials{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .instagram{
+        margin-right: 20px;
+        margin-bottom: 50px;
+    }
+    .email{
+        margin-bottom: 20px;
+    }
+    .nav_side p{
+        margin-right: 50px;
+    }
+    .nav_side p{
+        margin-right: 0px;
+    }
+}   

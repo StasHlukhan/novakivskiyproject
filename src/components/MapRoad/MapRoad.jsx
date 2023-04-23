@@ -45,27 +45,30 @@ import { useScrollAnim } from "../../hooks/useScrollAnim";
 import { useNumber } from "../../hooks/useNumber";
 import TimeLine from "../../components/TimeLine/TimeLine";
 import NavBar from "../NavBar/NavBar";
+
  
 
 function MapRoad() {
   const myRef = useRef(null)
 
-  const executeScroll = () => myRef.current.scrollIntoView()  
   
+  
+
  
-  // const [scrollAnim,scrolledState] = useScrollAnim();
-  // const [numberGrow,numberState] = useNumber()
+ 
+  const [scrollAnim,scrolledState] = useScrollAnim();
+  const [numberGrow,numberState] = useNumber()
   
-  // useEffect(() => {
-  //   numberGrow()
-  // }, []);
+  useEffect(() => {
+    numberGrow()
+  }, []);
 
   
 
-  // useEffect(() => {
-  //   scrollAnim()
+  useEffect(() => {
+    scrollAnim()
     
-  // }, []);
+  }, []);
 
 
   
@@ -77,11 +80,11 @@ function MapRoad() {
     <div>
       
       
-      
+      <TimeLine></TimeLine>
         <div  className="first_period">
           <div className="center">
-            {/* <div className={ scrolledState ? "my-class" : "line"}><span className='number' >{numberState}</span></div> */}
-            <div className="my-class"><span className='number' >1872</span></div>
+            <div className={ scrolledState ? "my-class" : "line"}><span className='number' >{numberState}  </span></div>
+            {/* <div className="my-class"><span className='number' >1872</span></div> */}
           </div>
           <div className="page">
             <div className="left_side">
@@ -138,21 +141,29 @@ function MapRoad() {
           </div>
         </div>
 
-        {/* <div className="title">
+        <div className="title">
           <div className="main_title show_up element-animation"><h2>Krakow Academy of Fine Arts.</h2></div>
         </div>
 
+
+
+
+
+
+
+
+
         <div className="second_period">
           <div className="page">
-            <div className="left_side">
-              <div className="img">
+            <div className="left_side1">
+              <div className="extra_img">
                 <img src={Leon} alt="" />
                 <p className="caption">Leon Vychulkovsky</p>
               </div>
               <p className="mid_margin_top">Under Falat, the Krakow School of Drawing became an academy, one of the best art universities in Eastern Europe. Artists who fought against academic conservatism and defended creative positions, such as the aesthetics of Secession, Impressionism, and Symbolism, were invited there. During his studies at the academy and a four-year internship with Leon Vychulkovskyi, Novakivskyi created hundreds of impressionistic landscapes, conveying the impression of instant sensations and experiences through sketchy strokes and the effects of changing light. Novakivsky began to fill the landscapes with deep meaning and allegorical connotations.</p>
-              <p className="low_margin_top">Novakivsky is the most successful graduate of the Krakow Academy of Fine Arts in terms of the number of medals and awards. From the second year of his studies, he was recognized by the Academy, but for unknown reasons, he lost his scholarship from the Brzezowski. His friend Holubowsky in The Spread of Mighty Wings suggests that it was because he signed his paintings in Ukrainian. At that time, he had to sell his paintings and drawings to make a living. He is considered a student of Jan Matejko. Stanisław Wyspianski and Jacek Malczewski, as well as Josef Meghofer, the luminaries of Polish symbolism, had a special influence on the formation of his figurative thinking. </p>
+              <p className="extra_margin_top">Novakivsky is the most successful graduate of the Krakow Academy of Fine Arts in terms of the number of medals and awards. From the second year of his studies, he was recognized by the Academy, but for unknown reasons, he lost his scholarship from the Brzezowski. His friend Holubowsky in The Spread of Mighty Wings suggests that it was because he signed his paintings in Ukrainian. At that time, he had to sell his paintings and drawings to make a living. He is considered a student of Jan Matejko. Stanisław Wyspianski and Jacek Malczewski, as well as Josef Meghofer, the luminaries of Polish symbolism, had a special influence on the formation of his figurative thinking. </p>
             </div>
-              <div className="right_side">
+              <div className="right_side1">
                 <p>An artist from Krakow who taught painting to the children of local nobility was impressed by Oleksa's talent. He persuaded the Brzozowski family to give him the scholarship to continue his studies at the Krakow Academy of Fine Arts.</p>
                 <p className="low_margin_top">Upon entering the Academy, it turned out that he did not have a matura (basic education at the time), but his talent impressed the admission committee so much that the rectorate specially organized a separate general education exam to accept Oleksa as a student of the Academy.</p>
                 <div className="img mid_margin_top">
@@ -172,7 +183,7 @@ function MapRoad() {
             </div>
             <div className="right_side">
               <p className="high_margin_top">Members of the Ukrainian community in Krakow cooperated with the Prosvita Society, Ukrainian communities of Naddniprianshchyna, the Russian-Ukrainian Radical Party, and the Revolutionary Ukrainian Party. In 1930, the community numbered about 400 students.</p>
-              <div className="img mid_margin_top">
+              <div className="img extra_margin_top">
                 <img src={Fair} alt="" />
                 <p className="caption">A fair in Ukraine. 1903</p>
               </div>
@@ -184,18 +195,18 @@ function MapRoad() {
           </div>
 
           <div className="page">
-            <div className="left_side">
+            <div className="left_side1">
               <div className="img">
                 <img src={Maria} alt="" />
                 <p className="caption">Anna Maria Novakivska. Photo from 1919.</p>
               </div>
               <p className="mid_margin_top"> "Initially, she stood in that marriage under the overwhelming influence of Oleksa's strongly pronounced individuality. His God became at once his God, his faith became her faith, his aspirations became his passion, his homeland became her homeland... But soon she moves on. This exceptional woman was his wing and friend, his guardian and his true support," Ivan Holubovsky writes in The Span of Mighty Wings.</p>
               <p> Her family was poor Hural (Polish Hutsuls). And in honor of his wife's origins, Oleksa Novakivsky asked her to wear Hural clothes, which added to her authenticity. Authenticity.</p>
-              <p className="low_margin_top margin_left">"My dear and very dear Nusenko! It is a wonderful moonlit night. And I am with You in my thoughts and soul. My dear, how beautiful it is here! And I miss You to the point of complete happiness. How happy I will be if You stay here in Shlyakhtyntsi, for without You I will be very much covered... Come now, when the moonlit nights are so beautiful. I want to look into your blue eyes. Your blue eyes are my eternal joy." (letter from 1924).</p>
+              <p className="extra_margin_top margin_left">"My dear and very dear Nusenko! It is a wonderful moonlit night. And I am with You in my thoughts and soul. My dear, how beautiful it is here! And I miss You to the point of complete happiness. How happy I will be if You stay here in Shlyakhtyntsi, for without You I will be very much covered... Come now, when the moonlit nights are so beautiful. I want to look into your blue eyes. Your blue eyes are my eternal joy." (letter from 1924).</p>
             </div>
-            <div className="right_side">
+            <div className="right_side1">
               <p>Oleksa Novakivsky moved to the village of Mohyla in the suburbs of Krakow (like Bryukhovychi near Lviv or Bucha near Kyiv). There he rented a room from Rosalia Palmowska, a widow who lived in the house with her daughter Anna Maria.There he found his first admirer. A doctor from Krakow, Hohulski, visited a patient near that house when Oleksa was seriously ill. In addition to medical care and treatment, Novakivsky also received financial support from the couple Yosyp and Leontyna, who from then on bought his paintings and hosted him in their home. In their home, Oleksa met Bohdan Lepkyi and his future friend Ivan Holubovsky, who was Leontyna's brother.</p>
-              <p className="low_margin_top margin_left">Rosalie Palmovska’s daughter was interested in Oleksa's work and spent hours watching him work. When Mrs. Palmovska died, the artist began to take care of the orphan. Gradually, their communication grew into tender love. "You are my only sunny love," Novakivskyi would say to Anna Maria. </p>
+              <p className="extra_margin_top margin_left">Rosalie Palmovska’s daughter was interested in Oleksa's work and spent hours watching him work. When Mrs. Palmovska died, the artist began to take care of the orphan. Gradually, their communication grew into tender love. "You are my only sunny love," Novakivskyi would say to Anna Maria. </p>
               <div className="img mid_margin_top">
                 <img src={Muse} alt="" />
                 <p className="caption">My muse. 1910. Oil on canvas</p>
@@ -204,13 +215,13 @@ function MapRoad() {
           </div>
 
           <div className="page">
-            <div className="left_side">
+            <div className="left_side1">
               <p className="mid_margin_top"> Ivan Holubovskyi invited Novakivsky to visit him. Oleksa spent several months at his family estate in the village of Broshniv in the Boikivshchyna region. There, the young artist met Metropolitan Andrey Sheptytskyi, who was staying nearby at the summer residence of the Galician metropolitans, the Cedar Chamber, in the Pidliute tract.</p>
               <p className="mid_margin_top">Later, their acquaintance grew into an offer to Oleksa to move to Lviv and then grew into friendship and partnership in the implementation of numerous artistic and educational projects, including the Art School (which was to become the Academy in the future) and the Ukrainian Secret University. </p>
               <p className="mid_margin_top">Sheptytsky's exceptional personality prompted the artist to portray the Metropolitan many times: there are 18 paintings and more than 200 sketches and drawings. Novakivsky considered the Metropolitan's portrait not only a great creative challenge but also a matter of historical importance. This logically resonated with the philosophy of historical portraits of one of his teachers, Jan Matejko.</p>
-              <p className="low_margin_top">He not only showed the spiritual greatness of the bishop, but also depicted the brightest and most characteristic features of the Ukrainian cultural, historical, and spiritual environment. "The Metropolitan in Monastic Robes," "Moses," "A Heavy Sleep," "In the Metropolitan's Chair," and "The Prince of the Church." Many works depicting Sheptytsky were destroyed by the Soviet authorities during the so-called "inventory of funds."</p>
+              <p className="extra_margin_top">He not only showed the spiritual greatness of the bishop, but also depicted the brightest and most characteristic features of the Ukrainian cultural, historical, and spiritual environment. "The Metropolitan in Monastic Robes," "Moses," "A Heavy Sleep," "In the Metropolitan's Chair," and "The Prince of the Church." Many works depicting Sheptytsky were destroyed by the Soviet authorities during the so-called "inventory of funds."</p>
             </div>
-            <div className="right_side">
+            <div className="right_side1">
               <p className="mid_margin_top">When they met, Oleksa was already a graduate of the Krakow Academy of Arts with a bunch of honors and gold medals. And Vladyka saw in that personality not only the talent of an artist but also a teacher and a thinker.</p>
               <p>They were partners and maybe even friends in a sense. Sheptytsky gladly bought Novakivsky's paintings, hosted the artist and his School at his Carpathian residence, and paid for his students' continued education in Europe. And when his great-grandfather passed away, he took in his orphaned children Yaroslav and Zhdan. By the way, some of the best photos of Oleksa Novakivsky were taken by Andrey Sheptytsky's personal photographer Yaroslav Koval.</p>
               <div className="img mid_margin_top">
@@ -221,15 +232,15 @@ function MapRoad() {
           </div>
 
           <div className="page">
-            <div className="left_side">
+            <div className="left_side0">
               <p className="mid_margin_top">Oleksa Novakivsky's first solo exhibition took place in Krakow, where the artist presented more than 100 works that brought him recognition and popularity. Metropolitan Andrei Sheptytsky became interested in the paintings and offered the artist to move to Lviv to create the future Academy of Arts, for which he could not find a suitable candidate to lead it.</p>
-              <div className="img low_margin_top">
+              <div className="img extra_margin_top">
                 <img src={Andrey} alt="" />
                 <p className="caption">Metropolitan Andrey Sheptytsky</p>
               </div>
             </div>
-            <div className="right_side">
-              <div className="img mid_margin_top">
+            <div className="right_side0">
+              <div className="img extra_big_margin_top">
                 <img src={Plywood} alt="" />
                 <p className="caption">1910 р. Plywood, oil. Private collection</p>
               </div>
@@ -237,18 +248,18 @@ function MapRoad() {
           </div>
 
           <div className="page1">
-            <div className="left_side">
+            <div className="left_side2">
               <p>The collections of the newly created National Museum in Lviv included 143 drawings from three "Albums from St. Lazarus Hospital" presented to Andrey Sheptytsky as a token of gratitude for the Metropolitan's support. Founded in 1905 by Greek Catholic Metropolitan Andrey Sheptytsky as a private foundation, in 1913 it was solemnly donated to the Ukrainian people. </p>
               <div className="img low_margin_top">
                 <img src={Panel} alt="" />
                 <p className="caption">Art. Panel for the musical societynamed after M. Lysenko in Lviv. 1913-1914</p>
               </div>
-              <div className="img mid_margin_top">
+              <div className="img extra_big_margin_top">
                 <img src={Heart_j} alt="" />
                 <p className="caption">A sketch of the composition "Heart of Jesus" for a stained-glass window project. 1913 р.Paper and ink. Collection of the Andrey Sheptytsky National Museum of Art</p>
               </div>
             </div>
-            <div className="right_side">
+            <div className="right_side2">
               <div className="img ">
                 <img src={Lazarus} alt="" />
                 <p className="caption">"At St. Lazarus Hospital (Unrest). 1913"</p>
@@ -257,25 +268,25 @@ function MapRoad() {
                 <img src={Heart_s} alt="" />
                 <p className="caption">A sketch of the composition "Heart of a Sousa" for a stained-glass window project. 1913 р.Album of drawings from St. Lazarus HospitalPaper, pencil Collection of the Andrey Sheptytsky NML</p>
               </div>
-              <p className="mid_margin_top">Subsequently, many paintings were transferred to the museum as payment for the apartment next to the studio.</p>
+              <p className="extra_big_margin_top">Subsequently, many paintings were transferred to the museum as payment for the apartment next to the studio.</p>
             </div>
           </div>
 
           <div className="page">
             <div className="left_side ">
-              <div className="img">
+              <div className="img extra_hide_margin_top">
                 <img src={Yarik} alt="" />
                 <p className="caption">"Yaroslav Osmomysl - Warrior"</p>
               </div>
               <p>The impetus for the creation was the proposal of the head of the USS Press Apartment, writer Osyp Nazaruk, to illustrate his novel Prince Yaroslav Osmomysl. Novakivskyi was also approached by the Kyiv publishing company Vernyhora and offered to create portraits for textbooks on the history of Ukraine. </p>
-              <div className="img low_margin_top">
+              <div className="img extra_margin_top">
                 <img src={Sviatik} alt="" />
                 <p className="caption">"Sviatoslav the Conqueror</p>
               </div>
             </div>
             <div className="right_side ">
               <p>Novakivsky's move to Lviv coincided with tumultuous events - the outbreak of national liberation struggles on both sides of the Austrian-Russian border. Oleksa turned to historical themes and began a series of images of the princes of Russia. The images acquired a patriotic sound and awakened the fighting spirit.</p>
-              <div className="img mid_margin_top">
+              <div className="img extra_big_margin_top">
                 <img src={Self} alt="" />
                 <p className="caption">Self-portrait. 1913р. Cardboard, oil</p>
               </div>
@@ -309,23 +320,26 @@ function MapRoad() {
         </div>
         <div className="third_period">
           <div className="page1">
-            <div className="left_side">
+            <div className="left_side2">
               <p>In 1923, Oleksa Novakivsky founded an art school in Lviv. But this is not the school that you will find in Lviv today under the name of Novakivsky. Artist never taught children. Except for his own. </p>
               <p className="high_margin_top">Among the students of the School are artists known in Ukraine and abroad, such as Roman Selskyi, Hryhorii Smolskyi, Edward Kozak, Sviatoslav Hordynskyi, Myron Levytskyi, and Mykhailo Moroz. In total, more than 100 students from all over Ukraine-from Galicia, Bukovyna, Hutsul, and even Volyn and Naddniprianshchyna-studied at the Novakivskyi School for free. These were talented adults from Ukrainian families who realized that without education they had no foundation for building a new state. In fact, they were inventing it as typical leaders of change, using what they had themselves.  </p>
               <p className="high_margin_top">"In the folk art of Ukraine, we have the influence of Persia and India," said Oleksa Kharlampiyovych. "It also resonates with Egypt. It is rich in color and form. So, ethnography in art is very necessary, but not excessively so. A poet who is only interested in ethnography would not produce a poem unless he or she had an ethnographic study."</p>
               <p className="mid_margin_top">The students united in groups of artists, giving birth to the Ukrainian page in the European history of postmodernism. There were three such groups in Lviv at the time: Artes (1929-1935), the Lviv Professional Union of Plastic Artists (1932-1939), and the Ukrainian Society of Art Supporters (1930-1939), which often acted as promoters of their members' works. </p>
             </div>
-            <div className="right_side">
+            <div className="right_side2">
               <div className="img">
                 <img src={Lecture} alt="" />
                 <div className="caption">A drawing lecture at the Oleksa Novakivskyi Art School. From left to right: O. Pleshkan, S. Hordynskyi, Zhdan and Yaroslav (sons of O. Novakivskyi), O. Novakivskyi, M. Moroz, H. Smolskyi. Photo from 1927.</div>
               </div>
               <p className="half_mid_margin_top">The Ukrainian elite of the time studied at his school. After all, according to the original plan of Andrey Sheptytsky, who invited Oleksa Novakivsky to create this educational space, it was to become the Academy of Arts in Western Ukraine in the future, reinforcing the important policy of developing the education of Ukrainians and strengthening the cultural space, the transformation of which was in its active phase, giving rise to numerous new trends and movements. The studio of the artist and teacher itself became a well-known cultural center in Western Ukraine, echoing the Krakow home of Lepky, which he attended as a student. </p>
-              <img className="mid_margin_top" src={Man} alt="" />
+              <div className="img">
+                <img className="mid_margin_top" src={Man} alt="" />
+                </div>
+        
             </div>
           </div>
           <div className="page1">
-            <div className="left_side">
+            <div className="left_side2">
               <div className="img">
                 <img src={Oleksa} alt="" />
                 <p className="caption">Oleksa Novakivskyi. Portrait of Ivan Holubovsky</p>
@@ -338,7 +352,7 @@ function MapRoad() {
               <p className="low_margin_top">"We lived in a rented Hutsul hut, slept on benches, and at dawn, we would take off for trips to the mountains, always with cassettes, paints, and cardboard, and we would paint beautiful motifs with zeal. When they returned, they would place their sketches under the wall of the house, and Novakivsky would give us his comments," recalled a student of the school, Sviatoslav Hordynsky.</p>
               <p className="low_margin_top margin_left">"And it is a characteristic thing that among the hundreds of those works about the same subject, there are no two that are similar to each other in a nutshell. Each of those works is accompanied by different music in form, color, light, and expression, so it is understandable why the students lovingly called the artist "the magician of St. George," Ivan Holubovsky recalled.</p>
             </div>
-            <div className="right_side">
+            <div className="right_side2">
               <p>The school united the Ukrainian elite of the region and implemented the principle of co-financing, which was mainly due to charitable donations. The educational process at the O. Novakivsky Art School was modeled after the Krakow Academy. Artists and intellectuals known in Galicia and beyond were involved in teaching. Metropolitan Andrey Sheptytsky personally taught a separate course on the history of world art to the school's students.</p>
               <div className="img half_mid_margin_top">
                 <img src={Virgin} alt="" />
@@ -368,18 +382,18 @@ function MapRoad() {
           </div>
 
           <div className="page">
-            <div className="left_side">
-                <div className="img">
+            <div className="left_side1">
+                <div className="img extra_hide_margin_top">
                 <img src={Female} alt="" />
                 <p className="caption">Portrait of a female artist at the piano / Music.1929 Plywood and oil on canvas.</p>
               </div>
-              <div className="img mid_margin_top">
+              <div className="img extra_big_margin_top">
                 <img src={Holubovska} alt="" />
                 <p className="caption">Portrait of H. Holubovska (the so-called Spring).1929 Cardboard, opium.</p>
               </div>
             </div>
-            <div className="right_side">
-              <div className="img mid_margin_top">
+            <div className="right_side1 ">
+              <div className="img mid_margin_top ">
                 <img src={Metropolit} alt="" />
                 <p className="caption">Metropolitan in monastic clothes.1930-1931. Plywood, oil.</p>
               </div>
@@ -387,7 +401,7 @@ function MapRoad() {
             </div>
           </div>
 
-          <div className="page">
+          <div className="extra_page">
             <div className="left_side high_margin_top">
               <p>"Visiting the studio of the Ukrainian painter Oleksa Novakivsky is an unforgettable experience. He is like a patriarch, with bright piercing eyes and a friendly angelic smile. He is adored by young people, especially young artists, who experience the hospitality of his home.</p>
               <p className="low_margin_top">To a stranger, he explains his work in eloquent, verbose Ukrainian, combined with expressive hand gestures. It is not that his paintings are not interesting in themselves, without explanatory comments; on the contrary, they would be highly valued in the best contemporary exhibition halls in Paris or Berlin, where they would attract attention with their feverish intensity of color, the strength of line, and a certain Byzantine strangeness.</p>
@@ -440,7 +454,7 @@ function MapRoad() {
 
         <div className="fourth_period">
           <div className="page1">
-            <div className="left_side">
+            <div className="left_side2">
               <p className="mid_margin_top">The crown of Novakivsky’s work was to be his last work, the icon "Mother of Mercy" ("Sviatoyurska Madonna"). The master painted it for the central altar wall of St. George's Cathedral. However, he did not finish it. The charcoal composition on canvas measuring 330×197 cm is a graphic sketch for the altar image of the Virgin Mary, which was to decorate the sanctuary of St. George's Cathedral.</p>
               <div className="img mid_margin_top">
                 <img src={Pictures} alt="" />
@@ -448,7 +462,7 @@ function MapRoad() {
               <p className="half_mid_margin_top">This image is a kind of summary of the artist's creative work on the theme of the Virgin. While working on the icon, Novakivsky created about twenty oil sketches and almost a hundred drawings in pen, pencil, and charcoal. The creative idea evolved from the typical Eastern Christian interpretation of the Virgin Mary to the author's own, completely original interpretation based on a combination of ancient Ukrainian and Western European traditions.</p>
               <p className="mid_margin_top">For more than forty years, the image was hidden in the vaults of the museum's collections in the former Armenian Cathedral. For the first time, the "Sviatoyurska Madonna" was exhibited at the posthumous exhibition of Novakivskyi's works held in 1936 at the Museum of the Shevchenko Scientific Society.  For the second time, thanks to the efforts of the artist's grandson Andriy Novakivskyi, Lviv residents and guests were able to see the last work of the outstanding artist in September 1992 at the jubilee exhibition dedicated to the 120th anniversary of Novakivsky's birth.</p>
             </div>
-            <div className="right_side">
+            <div className="right_side2">
               <div className="img">
                 <img src={Statuya} alt="" />
               </div>
@@ -460,31 +474,31 @@ function MapRoad() {
             </div>
           </div>
           <div className="page3">
-            <div className="left_side">
+            <div className="left_side3">
               <p>Due to exhaustion, in early August 1935, the artist quit his job and went on vacation to the village of Dora (now Ivano-Frankivsk region), where his condition deteriorated sharply in two weeks.  Novakivsky was transported to Lviv and admitted to the hospital, where, after an unsuccessful operation, he died on the night of August 28-29, 1935.</p>
               <div className="img">
                 <img src={Society} alt="" />
                 <p className="caption">Posthumous personal exhibition of Oleksa Novakivsky at the Museum of the Shevchenko Scientific Society in Lviv</p>
               </div>
-              <p className="high_margin_top">During the inventory, by order of the Minister of Culture of the Ukrainian SSR, more than 2,000 works were removed from the funds of the Ukrainian Museum and destroyed, including 16 oil paintings and 61 graphic works by Oleksa Novakivskyi. In May 1952, lists for withdrawal were drawn up, which included 2,115 museum objects. </p>
+              <p className="extra_margin_top">During the inventory, by order of the Minister of Culture of the Ukrainian SSR, more than 2,000 works were removed from the funds of the Ukrainian Museum and destroyed, including 16 oil paintings and 61 graphic works by Oleksa Novakivskyi. In May 1952, lists for withdrawal were drawn up, which included 2,115 museum objects. </p>
               <p className="high_margin_top">On the initiative of Oleksa Novakivskyi's son Yaroslav and grandson Andrii, the artist's memorial museum was opened in the workshop opposite the Yura Cathedral. The museum could never have appeared if it were not for the celebration of the 100th anniversary of the birth of the Maestro by UNESCO, according to which the city had to report on the held solemn events.Currently, it is one of the four memorial museums that are part of the Andrei Sheptytskyi National Museum.</p>
-              <p className="high_margin_top">Mykola Mushinka offered to transfer several paintings to the newly created Oleksa Novakivsky Memorial Museum in exchange for printing an article about the recovered paintings, but was refused. Only when the artist's grandson Andriy Novakivsky headed the Lviv Museum of Ukrainian Art (through his efforts in 1991, the name "National" was returned to the museum), during a visit to Lviv in 1987, cooperation between the museum and the collector began. It logically complemented Andriy Novakivsky's large-scale plan for the international development of the museum and the development of his international contacts with world museums and collectors of Ukrainian art.</p>
-              <p className="high_margin_top">Hieromonk Sevastiyan found from private individuals one of the original sketches on cardboard with the image of the plot "Moses", belonging to the hand of Oleksa Novakivsky. The following year, the presentation of the newfound work "Moses" was organized to celebrate the 130th anniversary of the artist. It is believed that this is one of the versions of the work, because the tradition of Novakivsky was that the final picture could be preceded by dozens of drawings and paintings. It is known that the master worked on the symbolic plot of "Moses" from 1915 to 1919.</p>
-              <p className="high_margin_top">Golubovsky was not just a friend of the artist. In fact, his role can be compared with the role of brother Theo in the life of Vincent Van Gogh. He himself bought Novakivsky's paintings (although this was also a matter due to Oleksa's unwillingness to take money for them), and also helped sell paintings (which was an even greater challenge for the master, who valued his works as his own children and very hard to part with them). While living in Lviv, Novakivskogo's fellow lawyer provided legal assistance to the art school headed by him: he settled financial transactions, represented in the courts. After the artist's death, Ivan Golubovsky, despite all the difficulties that fell to his lot, preserved for his descendants up to fifty works by Oleksa Novakivsky – a considerable component of the creative work of the Ukrainian artist, which has survived to this day.</p>
-              <p className="high_margin_top">Slovak collector and professor Mykola Mushynka presented to the National Museum in Lviv named after Andrey Sheptytsky 50 paintings and graphic works of the artist.</p>
+              <p className="extra_margin_top">Mykola Mushinka offered to transfer several paintings to the newly created Oleksa Novakivsky Memorial Museum in exchange for printing an article about the recovered paintings, but was refused. Only when the artist's grandson Andriy Novakivsky headed the Lviv Museum of Ukrainian Art (through his efforts in 1991, the name "National" was returned to the museum), during a visit to Lviv in 1987, cooperation between the museum and the collector began. It logically complemented Andriy Novakivsky's large-scale plan for the international development of the museum and the development of his international contacts with world museums and collectors of Ukrainian art.</p>
+              <p className="mid_margin_top">Hieromonk Sevastiyan found from private individuals one of the original sketches on cardboard with the image of the plot "Moses", belonging to the hand of Oleksa Novakivsky. The following year, the presentation of the newfound work "Moses" was organized to celebrate the 130th anniversary of the artist. It is believed that this is one of the versions of the work, because the tradition of Novakivsky was that the final picture could be preceded by dozens of drawings and paintings. It is known that the master worked on the symbolic plot of "Moses" from 1915 to 1919.</p>
+              <p className="mid_margin_top">Golubovsky was not just a friend of the artist. In fact, his role can be compared with the role of brother Theo in the life of Vincent Van Gogh. He himself bought Novakivsky's paintings (although this was also a matter due to Oleksa's unwillingness to take money for them), and also helped sell paintings (which was an even greater challenge for the master, who valued his works as his own children and very hard to part with them). While living in Lviv, Novakivskogo's fellow lawyer provided legal assistance to the art school headed by him: he settled financial transactions, represented in the courts. After the artist's death, Ivan Golubovsky, despite all the difficulties that fell to his lot, preserved for his descendants up to fifty works by Oleksa Novakivsky – a considerable component of the creative work of the Ukrainian artist, which has survived to this day.</p>
+              <p className="mid_margin_top">Slovak collector and professor Mykola Mushynka presented to the National Museum in Lviv named after Andrey Sheptytsky 50 paintings and graphic works of the artist.</p>
             </div>
 
-            <div className="right_side">
+            <div className="right_side3">
               <p>In recent days, Ivan Golubovsky sat near Novakivsky. He comforted that there would soon be a second operation, which would definitely be successful. Golubovsky recounted that before his death, Novakivsky had a dream: "I had it at night... wife. That's the end, John! Tonight I recognized my wandering. I won't hold my brush with my hand anymore... I shout to her: I don't want to die. And she's on it: it's not death. No death! Nothing dies...".</p>
-              <p className="high_margin_top">An exhibition of fine arts from the Western regions of Ukraine and Hutsul folk art was held in Moscow and Kharkiv. It is known that 20 paintings by Oleksa Novakivsky did not return to Lviv.</p>
-              <p className="high_margin_top">Among the seized museum objects are canvases of prominent Ukrainian artists O. Novakivsky, M. Sosenko, F. Krasytsky, P. Kholodny, M. Boichuk, S. Gordynsky, O. Kulchytska, M. Hlushchenko, H. Narbut and others. At first they were planned to be taken to Kyiv, but I. Svientsitsky opposed the transfer of these exhibits. By order of the secretary of the Lviv Regional Committee of the Party, K. Lytvyn, cultural values were transported by two trucks in three flights to the Lviv Library of the Academy of Sciences of the Ukrainian SSR "for the destruction of nationalist anti-Soviet exhibits." Earlier, 4,500 historical books and 2 boxes of museum weapons were brought here. Witnesses of those events emphasized that the crematorium for art smoked over the city for several days.</p>
+              <p className="mid_margin_top">An exhibition of fine arts from the Western regions of Ukraine and Hutsul folk art was held in Moscow and Kharkiv. It is known that 20 paintings by Oleksa Novakivsky did not return to Lviv.</p>
+              <p className="extra_margin_top">Among the seized museum objects are canvases of prominent Ukrainian artists O. Novakivsky, M. Sosenko, F. Krasytsky, P. Kholodny, M. Boichuk, S. Gordynsky, O. Kulchytska, M. Hlushchenko, H. Narbut and others. At first they were planned to be taken to Kyiv, but I. Svientsitsky opposed the transfer of these exhibits. By order of the secretary of the Lviv Regional Committee of the Party, K. Lytvyn, cultural values were transported by two trucks in three flights to the Lviv Library of the Academy of Sciences of the Ukrainian SSR "for the destruction of nationalist anti-Soviet exhibits." Earlier, 4,500 historical books and 2 boxes of museum weapons were brought here. Witnesses of those events emphasized that the crematorium for art smoked over the city for several days.</p>
               <p className="high_margin_top">The famous Slovak collector Professor Mykola Mushinka, in search of the author of the previously discovered manuscript about Oleksa Novakivskyi, finds himself in the sealed apartment of the Golubovsky family in Prague. The apartment was sealed after the death of the daughter of the famous Ukrainian public figure and lawyer Ivan Golubovsky. There, Mushinka finds documents, photographs, and written materials, including Ivan Golubovsky's novel essay about his friend Oleksa Novakivskyi. And at the auction of works, he bought all the paintings by Novakivskyi that filled the walls of the Prague apartment. After all, he turned out to be the only buyer and the auctioneers were happy to sell the paintings as a group.</p>
-              <p className="high_margin_top">As a result, in 1990, an exhibition of Novakivsky's works from the Mushinka collection was organized in the Memorial Art Museum, and then at the State Museum of Fine Arts in Kyiv and the Transcarpathian Museum in Uzhgorod. The success of exhibitions in Ukraine aroused interest in the work of Oleksa Novakivsky among the art communities of the world, and the exhibition of Mushinka's paintings had its own honorary tour of the United States and was exhibited several times in the collector's native Slovakia.</p>
-              <p className="high_margin_top">On the occasion of the 130th anniversary of Oleksa Novakivsky and in memory of his grandson Andrei Novakivsky, Ivan Golubovsky's essay "The Span of Mighty Wings" is published. Since there is not a single edition dedicated to the epistolary heritage of Oleksa Novakivsky, at the moment it is the only work with reflections and quotes from the artist.Ivan Golubovsky was a lawyer and public figure, as well as a great friend of Oleksa Novakivsky. Their friendship lasted a long thirty years: from the moment they met in the Krakow apartment of Ivanovo Schwagra, Dr. Joseph (Józef) Hogulski until the last breath of Nowakowski, who actually died in the arms of his friend.</p>
-              <p className="high_margin_top">The Gordinski family presented the National Museum with a monumental graphic work "The Prince of the Church", which is a later version of the previously discovered "Moses".</p>
+              <p className="mid_margin_top">As a result, in 1990, an exhibition of Novakivsky's works from the Mushinka collection was organized in the Memorial Art Museum, and then at the State Museum of Fine Arts in Kyiv and the Transcarpathian Museum in Uzhgorod. The success of exhibitions in Ukraine aroused interest in the work of Oleksa Novakivsky among the art communities of the world, and the exhibition of Mushinka's paintings had its own honorary tour of the United States and was exhibited several times in the collector's native Slovakia.</p>
+              <p className="mid_margin_top">On the occasion of the 130th anniversary of Oleksa Novakivsky and in memory of his grandson Andrei Novakivsky, Ivan Golubovsky's essay "The Span of Mighty Wings" is published. Since there is not a single edition dedicated to the epistolary heritage of Oleksa Novakivsky, at the moment it is the only work with reflections and quotes from the artist.Ivan Golubovsky was a lawyer and public figure, as well as a great friend of Oleksa Novakivsky. Their friendship lasted a long thirty years: from the moment they met in the Krakow apartment of Ivanovo Schwagra, Dr. Joseph (Józef) Hogulski until the last breath of Nowakowski, who actually died in the arms of his friend.</p>
+              <p className="extra_margin_top">The Gordinski family presented the National Museum with a monumental graphic work "The Prince of the Church", which is a later version of the previously discovered "Moses".</p>
             </div>
           </div>
-        </div> */}
+        </div>
         <div style={{height:2000}}></div>
     </div>
   )

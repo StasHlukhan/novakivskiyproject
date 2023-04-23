@@ -7,8 +7,10 @@ function MainPage() {
   return (
     <div className='main_page'>
         
-        {/* <Home></Home> */}
-        <MapRoad></MapRoad>
+        <Home></Home>
+        
+        {/* <MapRoad></MapRoad> */}
+        
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <div className='footer'>
@@ -20,8 +21,11 @@ const Footer = () => {
               </svg>
               <p>emailemail@email.com</p>
             </div>
-            <div className="instagram"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M28.3335 3.33301H11.6668C7.06446 3.33301 3.3335 7.06397 3.3335 11.6663V28.333C3.3335 32.9354 7.06446 36.6663 11.6668 36.6663H28.3335C32.9359 36.6663 36.6668 32.9354 36.6668 28.333V11.6663C36.6668 7.06397 32.9359 3.33301 28.3335 3.33301Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M26.6665 18.9495C26.8722 20.3366 26.6353 21.7532 25.9894 22.9979C25.3436 24.2425 24.3217 25.2519 23.0692 25.8823C21.8167 26.5128 20.3972 26.7322 19.0128 26.5094C17.6284 26.2866 16.3494 25.633 15.3579 24.6415C14.3664 23.6499 13.7127 22.371 13.4899 20.9865C13.2672 19.6021 13.4866 18.1827 14.117 16.9301C14.7475 15.6776 15.7568 14.6558 17.0015 14.0099C18.2461 13.3641 19.6628 13.1272 21.0498 13.3329C22.4647 13.5427 23.7746 14.202 24.786 15.2134C25.7974 16.2248 26.4567 17.5347 26.6665 18.9495Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M29.1665 10.833H29.1832" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
-            <div className="facebook"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M29.9998 3.33301H24.9998C22.7897 3.33301 20.6701 4.21098 19.1073 5.77378C17.5445 7.33659 16.6665 9.4562 16.6665 11.6663V16.6663H11.6665V23.333H16.6665V36.6663H23.3332V23.333H28.3332L29.9998 16.6663H23.3332V11.6663C23.3332 11.2243 23.5088 10.8004 23.8213 10.4878C24.1339 10.1753 24.5578 9.99967 24.9998 9.99967H29.9998V3.33301Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
+              <div className="socials">
+                <div className="instagram"><Link target='_blank' to='https://instagram.com/novakivsky.space?igshid=YmMyMTA2M2Y='><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M28.3335 3.33301H11.6668C7.06446 3.33301 3.3335 7.06397 3.3335 11.6663V28.333C3.3335 32.9354 7.06446 36.6663 11.6668 36.6663H28.3335C32.9359 36.6663 36.6668 32.9354 36.6668 28.333V11.6663C36.6668 7.06397 32.9359 3.33301 28.3335 3.33301Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M26.6665 18.9495C26.8722 20.3366 26.6353 21.7532 25.9894 22.9979C25.3436 24.2425 24.3217 25.2519 23.0692 25.8823C21.8167 26.5128 20.3972 26.7322 19.0128 26.5094C17.6284 26.2866 16.3494 25.633 15.3579 24.6415C14.3664 23.6499 13.7127 22.371 13.4899 20.9865C13.2672 19.6021 13.4866 18.1827 14.117 16.9301C14.7475 15.6776 15.7568 14.6558 17.0015 14.0099C18.2461 13.3641 19.6628 13.1272 21.0498 13.3329C22.4647 13.5427 23.7746 14.202 24.786 15.2134C25.7974 16.2248 26.4567 17.5347 26.6665 18.9495Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M29.1665 10.833H29.1832" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></Link></div>
+                <div className="facebook"><Link  target='_blank' to='https://www.facebook.com/groups/567027587696944/?ref=share'><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M29.9998 3.33301H24.9998C22.7897 3.33301 20.6701 4.21098 19.1073 5.77378C17.5445 7.33659 16.6665 9.4562 16.6665 11.6663V16.6663H11.6665V23.333H16.6665V36.6663H23.3332V23.333H28.3332L29.9998 16.6663H23.3332V11.6663C23.3332 11.2243 23.5088 10.8004 23.8213 10.4878C24.1339 10.1753 24.5578 9.99967 24.9998 9.99967H29.9998V3.33301Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></Link></div>
+            </div>
+            
         </div>
     </div>
   )

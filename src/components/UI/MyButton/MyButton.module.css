@@ -15,3 +15,8 @@
     background: #660000;
     transition: 0.4s;
 }
+@media (max-width:1000px) {
+    .myBtn{
+        padding: 7px 30px;
+    } 
+}

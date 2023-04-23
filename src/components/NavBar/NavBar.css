@@ -68,7 +68,6 @@
     justify-content: space-around;
     align-items: center;
     box-shadow: 0px 4px 52px rgba(0, 0, 0, 0.04);
-
 }
 .logo{
     font-family: 'Montserrat';
@@ -102,9 +101,14 @@
     margin-right: 60px;
     transition: 0.3s;
 }
+
 .nav_link.active{
   color: #A30000;
 }
+.nav_elem{
+  display: flex;
+}
+
 .nav_elem a:hover{
   color: #A30000;
   transition: 0.3s;
@@ -130,4 +134,129 @@
     display: flex;
     align-items: center;
     margin-right: 40px;
+}
+.burger {
+ 
+  height: 5em;
+ 
+  display: none;
+  justify-content: flex-start;
+  padding: 1em;
+}
+
+.burger-menu {
+  height: 100%;
+  width: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger-bar {
+  width: 4em;
+  height: 0.5em;
+  background-color: black;
+  border-radius: 0.5em;
+}
+
+
+
+/* ------------- sliding menu ------------------ */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----- animations--------- */
+/* clicked */
+.burger-bar.clicked:nth-child(1){
+  transform: rotate(45deg) translate(0.05em, 1.1em);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2){
+  opacity: 0;
+  transform: scale(0.1);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3){
+  transform: rotate(135deg) translate(0em, 1em);
+  transition: ease-out 0.5s;
+}
+
+/* unclicked */
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+@media(max-width:1000px){
+  .nav_elem{
+    display: none;
+  }
+  .burger{
+    display: flex;
+  }
+  .nav_bar{
+    height: 50px;
+  }
+  .logo{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .burger{
+    padding: 1.5em;
+    
+  }
+  .burger-bar{
+    height: 0.5em;
+    width: 3em;
+  }
+  .switch_name{
+    display: none;
+  }
+  .switch_ui{
+    margin: 0;
+  }
+  .switch{
+    height: 28px;
+    width: 50px;
+  }
+  .slider:before{
+    width: 22px;
+    height: 22px;
+    left: 3px;
+    bottom: 3px;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(26px);
+    transform: translateX(22px);
+  }
+  .nav_link{
+    margin:  0 0 30px 0;
+  }
+}
+.menu {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  top: 48px;
+  z-index: 1;
+  
+}
+
+.nav_mobile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

@@ -13,7 +13,7 @@ import Footer from '../Footer/Footer';
 function AppRouter() {
   return (
     <div>
-        {/* <NavBar></NavBar> */}
+        <NavBar></NavBar>
         <Routes>
             <Route path='' element={<MainPage></MainPage>}></Route>
             <Route path='/posts' element={<PostsPage></PostsPage>}></Route>
@@ -24,7 +24,7 @@ function AppRouter() {
             <Route  path='/art_gallery' element={<ArtGallery></ArtGallery>}></Route>
 
         </Routes>
-        {/* <Footer></Footer> */}
+        <Footer></Footer>
     </div>
   )
 }
