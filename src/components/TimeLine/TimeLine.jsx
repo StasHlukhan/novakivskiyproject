@@ -10,15 +10,16 @@ function TimeLine() {
   const thirdChild = children[2];
   const fourthChild = children[3];
   const fifthChild = children[4];
-      const sections = [{start:1000,end:5400,child:firstChild},
+      const sections = [{start:1500,end:5400,child:firstChild},
     {start:5400,end:9800,child:secondChild},
     {start:9800,end:20400,child:thirdChild},
     {start:20400,end:32400,child:fourthChild},
-    {start:32400,end:Infinity,child:fifthChild}]
+    {start:32400,end:42000,child:fifthChild}]
     const timeShow = () =>{
-      if(window.scrollY >= 1000 ){
+      if(window.scrollY >= 1500 && window.scrollY <= 42000 ){
         setActive(true);
-      }else{
+      }
+      else{
         setActive(false)
       }
      
@@ -43,11 +44,11 @@ function TimeLine() {
         
           <div className="timeline" >
             <div className="periods">
-              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 1500 })} className="hover-underline-animation"><p className='period period-1'>  1872 - 1899</p></div>
-              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 6300 })} className='hover-underline-animation'> <p className='period period-2'> 1900-1902</p></div>
-              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 10500 })} className='hover-underline-animation'><p className='period period-3'> 1903-1913</p></div>
-              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 21000 })} className='hover-underline-animation'><p className='period period-4'>1923 - 1934</p></div>
-              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 33200 })} className='hover-underline-animation'><p className='period period-5'>1935 - 2016</p></div>
+              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 1600 })} className="hover-underline-animation"><p className='period period-1'>  1872 - 1899</p></div>
+              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 6400 })} className='hover-underline-animation'> <p className='period period-2'> 1900-1902</p></div>
+              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 11000 })} className='hover-underline-animation'><p className='period period-3'> 1903-1913</p></div>
+              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 22300 })} className='hover-underline-animation'><p className='period period-4'>1923 - 1934</p></div>
+              <div onClick={()=> window.scrollTo({ behavior: 'smooth', top: 35200 })} className='hover-underline-animation'><p className='period period-5'>1935 - 2016</p></div>
             </div>
           </div>
         </div>

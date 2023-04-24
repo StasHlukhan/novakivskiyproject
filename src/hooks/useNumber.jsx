@@ -53,8 +53,8 @@ export const useNumber = () => {
               const diff = Math.round(1 * ((scrolled - 36000) / 3000)) ;
               setNumber(1935+diff)
             }
-            else if(scrolled > 39500 && scrolled <= 42300){
-              const diff = Math.round(80 * ((scrolled - 39500) / 2800)) ;
+            else if(scrolled > 39500 && scrolled <= 41500){
+              const diff = Math.round(80 * ((scrolled - 39500) / 2000)) ;
               setNumber(1936+diff)
             }
             

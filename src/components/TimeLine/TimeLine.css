@@ -101,3 +101,25 @@
   .act p{
     color: white;
   }
+  @media(max-width:1000px){
+    .timeline{
+      height: 40px;
+      font-size: 10px;
+      z-index: 10;
+      
+    }
+    .periods{
+      height: 40px;
+      z-index: 10;
+      
+    }
+    .time_act,.time_act_hide{
+      height: auto;
+      z-index: 10;
+    }
+    .period{
+      height: 40px;
+      width: 70px;
+      z-index: 10;
+    }
+  }

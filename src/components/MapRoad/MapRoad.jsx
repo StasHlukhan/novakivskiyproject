@@ -45,12 +45,11 @@ import { useScrollAnim } from "../../hooks/useScrollAnim";
 import { useNumber } from "../../hooks/useNumber";
 import TimeLine from "../../components/TimeLine/TimeLine";
 import NavBar from "../NavBar/NavBar";
+import MorePosts from "../MorePosts/MorePosts";
 
  
 
 function MapRoad() {
-  const myRef = useRef(null)
-
   
   
 
@@ -332,7 +331,7 @@ function MapRoad() {
                 <div className="caption">A drawing lecture at the Oleksa Novakivskyi Art School. From left to right: O. Pleshkan, S. Hordynskyi, Zhdan and Yaroslav (sons of O. Novakivskyi), O. Novakivskyi, M. Moroz, H. Smolskyi. Photo from 1927.</div>
               </div>
               <p className="half_mid_margin_top">The Ukrainian elite of the time studied at his school. After all, according to the original plan of Andrey Sheptytsky, who invited Oleksa Novakivsky to create this educational space, it was to become the Academy of Arts in Western Ukraine in the future, reinforcing the important policy of developing the education of Ukrainians and strengthening the cultural space, the transformation of which was in its active phase, giving rise to numerous new trends and movements. The studio of the artist and teacher itself became a well-known cultural center in Western Ukraine, echoing the Krakow home of Lepky, which he attended as a student. </p>
-              <div className="img">
+              <div className="extra_img">
                 <img className="mid_margin_top" src={Man} alt="" />
                 </div>
         
@@ -410,35 +409,35 @@ function MapRoad() {
               <p className="half_mid_margin_top">Novakivsky's work became an object of interest for critics and art lovers during his lifetime, and his name was constantly on the pages of Lviv periodicals: Ukrainian, Polish, and Jewish. International publications also wrote about him, but due to the lack of research, there are few surviving archival references. Here is one of them from the correspondent of the British newspaper Frederick Augustus Foyt. "The work of A Ukrainian artist" (The Manchester Guardian. - 1932. - Jan. 15)</p>
               <div className="img mid_margin_top">
                 <img src={Exhibition} alt="" />
-                <p className="caption">At the exhibition of the Ukrainian Society of Art Supporters at the National Art School Museum in Lviv. From left to right: Hryhoriy Smolsky, Antin Rak, Nadiya Makukh, Zenon Pelensky, Frederick August Foyt, Olha Nytkevych, Lidia Turkevych, Volodymyr Kovalchuk, Oleksa Novakivsky, Antin Malyuta, Stepan Lutsyk</p>
+                <p className="half_mid_margin_top" >At the exhibition of the Ukrainian Society of Art Supporters at the National Art School Museum in Lviv. From left to right: Hryhoriy Smolsky, Antin Rak, Nadiya Makukh, Zenon Pelensky, Frederick August Foyt, Olha Nytkevych, Lidia Turkevych, Volodymyr Kovalchuk, Oleksa Novakivsky, Antin Malyuta, Stepan Lutsyk</p>
               </div>
             </div>
           </div>
 
           <div className="page">
-            <div className="left_side">
+            <div className="left_side0">
               <p>The school was represented by the works of its students in the Ukrainian pavilion at the Century of Progress World's Fair, which was held to mark the centennial of one of the largest American cities, Chicago. In Lviv, a helping committee was set up to collect exhibits for a separate Ukrainian pavilion: the National Museum, the Kosiv Hutsulshchyna Cooperative, the National Science and Technology Museum, the Boykivshchyna Museum in Sambir, and others joined the cooperation. </p>
               <div className="img high_margin_top">
                 <img src={Ukraine} alt="" />
                 <p className="caption">Ukrainians at the 1933-1934 World's Fair in Chicago</p>
               </div>
             </div>
-            <div className="right_side ">
+            <div className="right_side0">
               <p className="high_margin_top">О. Novakivsky submitted 19 of his own works to the exhibition, and several of his students decided to participate as well. However, after watching one of the film adaptations of the tragic story of the Titanic liner that sank in the waters of the Atlantic Ocean in April 1912 (perhaps it was the 1929 film The Atlantic by Ewald André Dupont or Frank Lloyd's war drama "Cavalcade" (1933)), the Maestro refused to participate in the Chicago exhibition because of the danger of transporting paintings by ocean (Voloshyn L. Olga Pleshkan. - Lviv, 2010. - P.136 - 137). As for Novakivskyi's pupils, their works were shown to the audience in the United States.</p>
             </div>
           </div>
           
-          <div className="page2">
-            <div className="left_side">
+          <div className="extra_page">
+            <div className="left_side0">
               <div className="img">
                 <img src={Book} alt="" />
               </div>
               <p className="mid_margin_top">In 2021, the Andrey Sheptytsky National Museum in Lviv prepared an expanded and scientifically researched reprint of the monograph for publication, but the book was never published. The book was supplemented with reprints of reviews of the aforementioned work by Volodymyr Zalozetskyi, as well as his articles about the artist's work.</p>
               <p className="low_margin_top">These materials contain notes that inform about the persons, institutions, organizations, and place names mentioned in the text, explain outdated vocabulary, and provide translations of foreign language words. </p>
             </div>
-            <div className="right_side">
-              <p className="half_mid_margin_top">The monograph "Oleksa Novakivsky" by the famous art critic and researcher Zalozetskyi is published. The monographs include 383 oil paintings and 20 graphic compositions.</p>
-              <div className="img">
+            <div className="right_side0">
+              <p className="extra_margin_top">The monograph "Oleksa Novakivsky" by the famous art critic and researcher Zalozetskyi is published. The monographs include 383 oil paintings and 20 graphic compositions.</p>
+              <div className="img extra_margin_top">
                 <img src={Monograph} alt="" />
                 <p className="caption">О. Novakivsky. My Muse. Illustration from the monograph by V. Zalozetskyi.</p>
               </div>
@@ -449,7 +448,8 @@ function MapRoad() {
         </div>
 
         <div className="title">
-          <div className="main_title show_up element-animation"><h2> <span> The last work.</span> <span> The last days of life</span> <span>and the afterlife</span> </h2></div>
+          
+          <div   className="main_title show_up element-animation"><h2 > <span> The last work.</span> <span> The last days of life</span> <span>and the afterlife</span> </h2></div>
         </div>
 
         <div className="fourth_period">
@@ -499,7 +499,7 @@ function MapRoad() {
             </div>
           </div>
         </div>
-        <div style={{height:2000}}></div>
+        <div style={{height:1000}}></div>
     </div>
   )
 }

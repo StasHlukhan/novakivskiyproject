@@ -46,7 +46,7 @@ const Home = () => {
         const nextIndex = prevIndex === images.length - 1 ? 0 : prevIndex + 1;
         return nextIndex;
       });
-    }, 5000);
+    }, 8000);
     return () => clearInterval(interval);
   }, []);
   return (

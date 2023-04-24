@@ -48,3 +48,20 @@
     line-height: 37px;
     color: #FFFFFF;
 }
+@media(max-width:1000px){
+    .donate_title{
+        font-size: 20px;
+        line-height: 22px;
+        width: 300px;
+    }
+    .donate_text{
+        width: 250px;
+        font-size: 15px;
+        line-height: 16px;
+
+    }
+    .rekviz{
+        font-size: 20px;
+        margin: 0;
+    }
+}

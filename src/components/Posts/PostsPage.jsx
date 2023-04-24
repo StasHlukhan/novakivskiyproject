@@ -30,7 +30,7 @@ const PostsPage = () => {
       
         <div className="post_page">
           <h2 className='post_title'>Статті</h2>
-          <PostFilter filterPosts={filterPosts}></PostFilter>
+          {/* <PostFilter filterPosts={filterPosts}></PostFilter> */}
           <PostList  posts={fileteredPosts}></PostList>
         </div>
         

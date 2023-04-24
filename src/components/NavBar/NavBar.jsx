@@ -35,7 +35,7 @@ const NavBar = () => {
               
       <div className="nav_bar">
             
-          <NavLink to='/' className="logo">Новаківський SPACE</NavLink>
+          <NavLink onClick={()=> window.scrollTo({ behavior: 'smooth', top: 0 })} to='/' className="logo">Новаківський SPACE</NavLink>
           <div className="nav_elem">
           <NavLink  to="/" className="nav_link" activeclassname="active">
             Головна
