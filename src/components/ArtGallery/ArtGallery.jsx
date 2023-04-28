@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Exhibition from '../../img/Exhibition.png'
 import Pagination from '../Pagination/Pagination'
 import ArtGalleryList from './ArtGalleryList'
 import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
 import './ArtGallery.css'
+import { ThemeContext } from '../../Context/ThemeContext'
 const ArtGallery = () => {
   const [currentPage,setCurrentPage] = useState(1)
   const [artsPerPage] = useState(12)
@@ -53,11 +54,13 @@ useEffect(()=>{
   const handleClose = () => {
     setSelectedImage(null);
   };
+  const {darkMode} = useContext(ThemeContext)
   return (
     
     <div>
       
-      <div  className="art_gallery">
+      <div className={darkMode ? "art_gallery dark-mode" : "art_gallery"} >
+      
         <div  className="art_gallery_info">
           <h2>Арт галерея</h2>
           <ArtGalleryList arts={currentArt} handleClick={handleClick} ></ArtGalleryList>

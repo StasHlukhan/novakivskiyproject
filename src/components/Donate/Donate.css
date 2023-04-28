@@ -7,8 +7,6 @@
     width: 800px;
     text-align: center;
    
-
-    color: #000000;
 }
 .donate_page{
     height: 800px;
@@ -16,7 +14,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 90px;
 }
+.dark-mode{
+    background-color: #212121;
+    color: white;
+  }
 .donate_info{
     height: 800px;
 
@@ -49,6 +52,9 @@
     color: #FFFFFF;
 }
 @media(max-width:1000px){
+    .donate_page{
+        margin-top: 50px;
+    }
     .donate_title{
         font-size: 20px;
         line-height: 22px;

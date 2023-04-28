@@ -9,6 +9,13 @@
     font-style: normal;
     
 }
+.dark-mode{
+    background-color: #212121;
+    color: white;
+  }
+.dark-mode-link{
+    color: white;
+}
 .logo_side{
 
     display: flex;
@@ -32,7 +39,7 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
-    color: #000000;
+    
     width: 230px;
 }
 .line_foot{

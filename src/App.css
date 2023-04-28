@@ -10,6 +10,9 @@ a{
     text-decoration: none;
 
 }
-a:hover{
+
+
+.dark-mode{
+    background-color: #212121;
     color: white;
 }

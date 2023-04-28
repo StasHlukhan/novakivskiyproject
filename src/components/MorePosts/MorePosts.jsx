@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PostItem from '../Posts/PostItem';
 import { useHistory, useLocation } from "react-router-dom";
-import '../Posts/Posts.css'
+import './MorePosts.css'
 
 import { useNavigate } from 'react-router-dom'
 

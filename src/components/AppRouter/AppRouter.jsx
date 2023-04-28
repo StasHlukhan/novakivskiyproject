@@ -11,6 +11,7 @@ import MainPage from '../MainPage/MainPage';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 function AppRouter() {
+  
   return (
     <div>
         <NavBar></NavBar>

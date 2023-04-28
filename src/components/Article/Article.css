@@ -1,10 +1,14 @@
 .facts7{
     background-image: url('/src/img/blackandwhite\ bg.png');
-    height: 866px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     color: white;
+    margin-top: 90px;
 }
 .facts7_main{
     width: 800px;
@@ -23,6 +27,7 @@
     font-size: 40px;
     line-height: 85px;
     text-align: center;
+    text-shadow: 0px 8.36842px 8.36842px rgba(0, 0, 0, 0.25);
 }
 .facts7_info{
     margin: 30px 0 10px 0;
@@ -75,6 +80,9 @@
 }
 .Article2{
     background-image: url('../../img/bg-2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 866px;
     display: flex;
     justify-content: center;
@@ -83,6 +91,9 @@
 }
 .Article3{
     background-image: url('../../img/blackandwhite\ 2\ \(3\).png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 866px;
     display: flex;
     justify-content: center;
@@ -109,4 +120,61 @@ letter-spacing: 0.02em;
 }
 .video{
     margin-top: 50px;
+}
+.caption_art{
+    width: 450px;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    color: #212121;
+    text-align: center;
+    margin-top: 5px;
+  }
+@media(max-width:1000px){
+    .facts7{
+        height: 300px;
+        width: 100%;
+        margin-top: 50px;
+    }
+    .facts7_main{
+        width: 350px;
+    }
+    .facts7_title{
+        font-size: 14px;
+        line-height: 22px;
+        width: 300px;
+        margin-bottom: 50px;
+    }
+    .facts7_info{
+        display: none;
+    }
+    .article_text{
+        width: 250px;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 400;
+    }
+    .caption_art{
+        display: none;
+    }
+    .img_vert img{
+        height: 280px;
+        width: 200px;
+        border-radius: 30px;
+      }
+      .img_goriz img{
+        height: 200px;
+        width: 270px;
+      }
+      .Article2{
+        height: 300px;
+        width: 100%;
+        margin-top: 50px;
+    }
+    .Article3{
+        height: 300px;
+        width: 100%;
+        margin-top: 50px;
+    }
 }

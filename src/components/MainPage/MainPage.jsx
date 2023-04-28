@@ -4,12 +4,16 @@ import NavBar from '../NavBar/NavBar'
 import MapRoad from '../MapRoad/MapRoad'
 import Home from '../Home/Home'
 import { useEffect } from 'react'
+
+import { useState } from 'react'
+
 function MainPage() {
-  useEffect(()=>{
-    window.scrollTo(0,0);
-  })
+  // useEffect(()=>{
+  //   window.scrollTo(0,0);
+  // })
+  
   return (
-    <div className='main_page'>
+    <div>
         
         <Home></Home>
         
@@ -17,6 +21,7 @@ function MainPage() {
         
         
     </div>
+    
   )
 }
 

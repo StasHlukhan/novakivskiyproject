@@ -1,64 +1,72 @@
 import React, { useState } from 'react'
-import { Link, NavLink, useLocation, useMatch } from 'react-router-dom'
-import Donate from '../Donate/Donate'
+import {  NavLink,  } from 'react-router-dom'
 import './NavBar.css'
 import LanguagePicker from '../UI/LanguagePicker/LanguagePicker'
+import { useContext } from 'react'
+import { ThemeContext } from '../../Context/ThemeContext'
+import { useEffect } from 'react'
 const NavBar = () => {
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked")
-    const [menu_class, setMenuClass] = useState("menu hidden")
-    const [isMenuClicked, setIsMenuClicked] = useState(false)
+  const [menu_class, setMenuClass] = useState("menu hidden")
+  const [isMenuClicked, setIsMenuClicked] = useState(false)
+  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
 
-    // toggle burger menu change
-    const updateMenu = () => {
-        if(!isMenuClicked) {
-            setBurgerClass("burger-bar clicked")
-            setMenuClass("menu visible")
-        }
-        else {
-            setBurgerClass("burger-bar unclicked")
-            setMenuClass("menu hidden")
-        }
-        setIsMenuClicked(!isMenuClicked)
+  const [checked, setChecked] = useState(
+    JSON.parse(localStorage.getItem("darkMode")) || false
+  );
+
+  // toggle burger menu change
+  const updateMenu = () => {
+    if(!isMenuClicked) {
+      setBurgerClass("burger-bar clicked")
+      setMenuClass(` ${darkMode ? "menu_d visible" : "menu visible"} `)
+    } else {
+      setBurgerClass("burger-bar unclicked")
+      setMenuClass("menu hidden")
     }
-    
-    const menuHide = ()=>{
-            setBurgerClass("burger-bar unclicked")
-            setMenuClass("menu hidden")
-    }
+    setIsMenuClicked(!isMenuClicked)
+  }
+
+  const menuHide = () => {
+    setBurgerClass("burger-bar unclicked")
+    setMenuClass("menu hidden")
+  }
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(checked));
+  }, [checked]);
   return (
-    <div>
-      
+    <div>  
+      <div  className={darkMode ? "navbar dark-mode-nav" : "navbar"}>
             
-
-            
-        
-              
-      <div className="nav_bar">
-            
-          <NavLink onClick={()=> window.scrollTo({ behavior: 'smooth', top: 0 })} to='/' className="logo">Новаківський SPACE</NavLink>
+          <NavLink onClick={()=> window.scrollTo({ behavior: 'smooth', top: 0 })} to='/'className={darkMode ? "logo dark-mode-link" : "logo"}>Новаківський SPACE</NavLink>
           <div className="nav_elem">
-          <NavLink  to="/" className="nav_link" activeclassname="active">
+          <NavLink  onClick={()=> window.scrollTo({ behavior: 'smooth', top: 0 })} to="/" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
             Головна
           </NavLink>
-          <NavLink to="/art_gallery" className="nav_link" activeclassname="active">
+          <NavLink onClick={()=> window.scrollTo({ behavior: 'smooth', top: 0 })} to="/art_gallery" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
             Арт галерея
           </NavLink>
-          <NavLink to="/posts" className="nav_link" activeclassname="active">
+          <NavLink  onClick={()=> window.scrollTo({ behavior: 'smooth', top: 0 })}to="/posts" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
             Медіа
           </NavLink>
-          <NavLink to="/donate" className="nav_link" activeclassname="active">
+          <NavLink onClick={()=> window.scrollTo({ behavior: 'smooth', top: 0 })} to="/donate" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
             Донат
           </NavLink>
         </div>
-          <div className="ui_buttons">
+          <div className="ui_buttons" >
             <div className="switch_ui">
-              <span className='switch_name'>Темна</span>
+              <span className={darkMode ? "switch_name dark-mode-link" : "switch_name"}>Темна</span>
               <label className="switch">
-                <input type="checkbox"/>
+              <input type="checkbox" checked={checked} onChange={() => {
+                toggleDarkMode();
+                setChecked(!checked);
+              }} />
                 <span className="slider round"></span>
               </label>
-              <span className='switch_name'>Тема</span>
+              <span className={darkMode ? "switch_name dark-mode-link" : "switch_name"}>Тема</span>
             </div>
+            
             
             <LanguagePicker></LanguagePicker>
           </div>
@@ -71,22 +79,24 @@ const NavBar = () => {
             </div>
           
       </div>  
+      
       <div  className={menu_class}>
           <div className="nav_mobile">
           
-            <NavLink onClick={updateMenu}  to="/" className="nav_link" activeclassname="active">
+            <NavLink onClick={updateMenu}  to="/" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
               Головна
             </NavLink>
-            <NavLink onClick={updateMenu} to="/art_gallery" className="nav_link" activeclassname="active">
+            <NavLink onClick={updateMenu} to="/art_gallery" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
               Арт галерея
             </NavLink>
-            <NavLink onClick={updateMenu} to="/posts" className="nav_link" activeclassname="active">
+            <NavLink onClick={updateMenu} to="/posts" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
               Медіа
             </NavLink>
-            <NavLink onClick={updateMenu} to="/donate" className="nav_link" activeclassname="active">
+            <NavLink onClick={updateMenu} to="/donate" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
               Донат
             </NavLink>
         
+          
           </div>
       </div>
     </div>

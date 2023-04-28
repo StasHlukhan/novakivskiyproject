@@ -1,6 +1,5 @@
 .art_gallery{
     background-color: #F0F0F0;
-
 }
 .art_gallery_info{
     display: flex;
@@ -19,7 +18,10 @@
     display: flex;
     flex-wrap: wrap;
 }
-
+.dark-mode{
+  background-color: #212121;
+  color: white;
+}
 
 .art_item_info img {
   height: 400px;
@@ -91,6 +93,18 @@ transition: transform 0.3s ease-in-out;
   cursor: zoom-out;
   transition: transform 0.3s ease-in-out;
 }
+.img_vert{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.img_goriz{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 @media(max-width:1000px){
   .art_item_info img {
     width: 80px;
@@ -111,4 +125,5 @@ transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
     
   }
+ 
 }

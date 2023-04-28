@@ -449,7 +449,7 @@ function MapRoad() {
 
         <div className="title">
           
-          <div   className="main_title show_up element-animation"><h2 > <span> The last work.</span> <span> The last days of life</span> <span>and the afterlife</span> </h2></div>
+          <div   className="main_title show_up element-animation extra_tit_hide_margin_top"><h2 > <span> The last work.</span> <span> The last days of life</span> <span>and the afterlife</span> </h2></div>
         </div>
 
         <div className="fourth_period">
