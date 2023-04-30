@@ -1,4 +1,4 @@
-.facts7{
+.Article1{
     background-image: url('/src/img/blackandwhite\ bg.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,74 +9,6 @@
     align-items: flex-end;
     color: white;
     margin-top: 90px;
-}
-.facts7_main{
-    width: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.facts7_main p{
-    margin: 0;
-}
-.facts7_title{
-    width: 1200px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 85px;
-    text-align: center;
-    text-shadow: 0px 8.36842px 8.36842px rgba(0, 0, 0, 0.25);
-}
-.facts7_info{
-    margin: 30px 0 10px 0;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 30px;
-    width: 700px;
-    display: flex;
-    justify-content: space-around;
-}
-.time{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-.facts7_info svg {
-    margin-right: 5px;
-}
-.calendar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-.links svg{
-    margin-right: 20px;
-}
-.article_text{
-    font-family: Montserrat;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 32px;
-    letter-spacing: 0.02em;
-    text-align: left;
-    width: 800px;
-    margin-top: 50px;
-    
-}
-.article_info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.article_info img{
-    margin-top: 50px;
-
 }
 .Article2{
     background-image: url('../../img/bg-2.png');
@@ -100,16 +32,83 @@
     align-items: flex-end;
     color: white;
 }
+.article_main{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.article_main p{
+    margin: 0;
+}
+.article_title{
+    width: 1200px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 85px;
+    text-align: center;
+    text-shadow: 0px 8.36842px 8.36842px rgba(0, 0, 0, 0.25);
+}
+.article_info{
+    margin: 30px 0 10px 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+}
+.time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.article_info svg {
+    margin-right: 5px;
+}
+.calendar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.links svg{
+    margin-right: 20px;
+}
+.article_text{
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    width: 800px;
+    margin-top: 50px;
+    
+}
+.article_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.article_main img{
+    margin-top: 50px;
+
+}
+
 .name_title{
     margin-top: 100px;
     font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 134.4%;
-/* or 48px */
-
-letter-spacing: 0.02em;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 134.4%;
+    letter-spacing: 0.02em;
 }
 .surname_title{
     font-weight: 700;
@@ -132,21 +131,31 @@ letter-spacing: 0.02em;
     margin-top: 5px;
   }
 @media(max-width:1000px){
-    .facts7{
+    .article{
         height: 300px;
         width: 100%;
         margin-top: 50px;
     }
-    .facts7_main{
+    .Article2{
+        height: 300px;
+        width: 100%;
+        margin-top: 50px;
+    }
+    .Article3{
+        height: 300px;
+        width: 100%;
+        margin-top: 50px;
+    }
+    .article_main{
         width: 350px;
     }
-    .facts7_title{
+    .article_title{
         font-size: 14px;
         line-height: 22px;
         width: 300px;
         margin-bottom: 50px;
     }
-    .facts7_info{
+    .article_info{
         display: none;
     }
     .article_text{
@@ -167,14 +176,5 @@ letter-spacing: 0.02em;
         height: 200px;
         width: 270px;
       }
-      .Article2{
-        height: 300px;
-        width: 100%;
-        margin-top: 50px;
-    }
-    .Article3{
-        height: 300px;
-        width: 100%;
-        margin-top: 50px;
-    }
+      
 }

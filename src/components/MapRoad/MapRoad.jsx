@@ -40,12 +40,10 @@ import Pictures from '../../img/Pictures.png'
 import Statuya from '../../img/Statuya.png'
 import Sons from '../../img/Sons.png'
 import Society from '../../img/Society.png'
-import { useRef } from "react";
 import { useScrollAnim } from "../../hooks/useScrollAnim";
 import { useNumber } from "../../hooks/useNumber";
 import TimeLine from "../../components/TimeLine/TimeLine";
-import NavBar from "../NavBar/NavBar";
-import MorePosts from "../MorePosts/MorePosts";
+
 
  
 

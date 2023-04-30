@@ -1,6 +1,3 @@
-
-
-
 import './Home.css'
 import carousel1 from '../../img/carousel_img/carousel1.png'
 import carousel2 from '../../img/carousel_img/carousel2.png'

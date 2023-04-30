@@ -1,14 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
-import Exhibition from '../../img/Exhibition.png'
 import Pagination from '../Pagination/Pagination'
 import ArtGalleryList from './ArtGalleryList'
-import NavBar from '../NavBar/NavBar'
-import Footer from '../Footer/Footer'
 import './ArtGallery.css'
 import { ThemeContext } from '../../Context/ThemeContext'
 const ArtGallery = () => {
-  const [currentPage,setCurrentPage] = useState(1)
-  const [artsPerPage] = useState(12)
   const [arts,setArts]=useState([{id:1,img:'https://lh3.googleusercontent.com/ih8NN1LUWxMQIJOH8ObmimV24w_oTOA5XWeOkfFRpe61A2v9p9ry0soUGbfHR9GpVxDrHKDMtJ4Lx_Slg4Pc8w3EUef7lE4xYxU5UtMq4dzfQF5Q-H8aSr7t7MeluJmbrQR2XY71q8jA2WRW6T75IDJbtVTm9SN7QaBJZdi3XssfMRIdf7I8VrHdBZMfS8drmOJVqlY5Gyn_KVIG5GUQUCwrV6SZqGK-8zy7DiwjLm8WQ4rBbOBg5Yxx1_5iD16j2-v6nOHKorvdAlwOVpZ3J7TzSiTQkqQderfNNH3JpXk4y6lchuVj8XxbFp83o8Fcf37GwhjgoZNbW-3Q44qO7mHROlUSyClMCuOxijt9F20F5MroiKCLFnWb9wSCNyEYyjO8ZbviugzBKsG5TrDO-0A98NPLd9JIvWxPDlHC4fXeuIsqcZwNdgLWRbQuK_zn2No3gyIQCVv4fXFKPEUZKav4InwLbxQ8Hh01-SyOcdnDaesvrTdNTeKYMUgiJmb0QWv0MFdwsfc7-tZyhumbdYS79ATkFa8o10RjUTKqXVbxx1A3JGkI3SxUxHpYAwbF0kG24Q_qWl0cUCw3HCgTda0VYStTbG9AYIdDz4UY48QZ6X9ZVXByFeuohVzsFl3JzdXfu_oYNFCwYHA2C-wKrtIhWOCjAmf7bcEhs44l0YuNJe8OSZARWJ9kUpfBTLTmpoZ_6sGITGKnTAQeWUsJnOWTYhsFiuLJ7FMGqUG7POeLB7sX9Ni5zC0sHLy6QZuTJ6akq_7vxl7Hf-Oz7-yWHBmRRNEpIzCRLT337efBO_iIA0UFyGdUUJ63x3sr5xAB1FuJYOc8R1e6S_6_EKM-vtAVFDuZ7UaFuftz6kQpBpWCD71bSwR9t1o9gfpmf1EcANJgD59M7GWlcOONeH17W_fKx78Ee1tNG-tdK5ZJ3uqKdAR5w0cj_PNNIo3OSwmB67F9AU7sXQG3au3JgGo6DTm-eCd-pvdnxnTF0_jLIQwgUxtt1lagBEoA=w545-h704-s-no?authuser=0'},
   {id:2,img:'https://lh3.googleusercontent.com/QzwoQfSKb_CxFZTNub9FvQeadGZirCgZuQ7IoObQ2fAudkAVUcHgaXrWLYaa1-WgEQ7biiaa-B3VJy3W7oypjnJj4aa-F2UXxKIijVNro925YfwwEzm9_kUApeWVQle5MDijCwnFwFzCVbrwp9b3Ly0oI4YaaKcu4g6zc8wlyH-U5KjgFZ1DEBePFVvqob9spHAQZjYH2lePVGQSKxYa-lmzNvPJzQD4fmiK_eOAaUlbmbM9MNzIPrFXpw_CREh-Ee_HysmKVhCZI5gBklzDTm6nnmKGuNwFJJtLu1Gw41vAkaFg_fZKPG6iwwE6fRtLkIpEQ6-ZmqKHlSEcynY_Dpmdp-ED5YJP5xovBqCh-VlBJ5lb8yjvEt5wAAMYjd6z8edKS5Gh41MVhLlb1zmW5cLGG0HhPVwIFxdUzAklxqxMZUzjAyjWL9YeQxZgg3cYtEWBd4F5YlvJE_irkmMeU1E6JjP_5r5YnKN_2R4Alsdd1gis2AnBkkCUVZAESE5bcWhBCJLyFlgHDz6EtcARMShkKtTknuZ4LC9u3uXZC9yMwoM-PL9nNjBD2az5OCeXaAoYfkQ62C8UAsHWeq1emw3ocMMrfKn7oz5wXgSiKOeD5NUCwLyJ9OLFhjNj6A8bb00RSmvO2MYlvonRq9zExKtIlg0Z5XcY0Jnm2zRy__IyDNWk7foYu2ktfhYFKfmJm_-MktYgTgnObs0uSV02Zw5RRlVck8Z-M5NuGcqRZT_Ymg8NZO0nHKy5i3o-9Hi2icHR4zvAbOir7nIBXMxFdpkTcWZuBye9LzsRI8-2up7-hVErqJ-xqACgTIoX0sTTPYZxsB0AruK8ntiJzLz01Yga9Ll23cuV1Z_ReYwOpZp_FoZIaUQ3KGxWnOTPX68KFf8NM_eFuRbAknZk0AqMhQMoElzXdRuVZQVwHW7DRgpYus5h8B0jIWz4hyPmQcp5FVIm5y5AgxACduXCQVDnP-q07bSTjhTmjbiTHZ4L6ps7N4d_SW05Z8lm=w395-h558-s-no?authuser=0'},
   {id:3,img:'https://lh3.googleusercontent.com/ofKoGaxar6ESp7mZyvP7vM9cqhZiGQ5OHZsWrqMf0D37nrIsRlQmKe36Xb-APkCWGB1wVeKi-_sEHPfaZYVS1U_6d3EX53ngYM4Ji9Oeimq9gl36vnIjzn0O_dN1BiIPsJmtAwOseKJTm7T-nJopUwnEZ8WertzXpsYjcpxf_aggvPHB-2xyKg25t5lT-aAEoqH49dich6eFj4Gnmg4jjA99hNp5ZpHvifb5GHnBHYNkr2_KTdyhhJMn_k_v5gwcKfYfAsDCsWxQbVV7uouNoEaehguYiDVOmLVn8fJK426e2Q--KOL4X-Pk4cSlAdSyL7O-ln2lZ-4UGhfD8dA8GfUyYI5BcAbQk6eYzF_VYZ6wMGx0A4gVx7pmhfpxXlrhLhfGi61yf4k1z6-dysfXkghyCwb7sTBJOHgYpW1KEGy7WqK1_k1waGEseRzQ2W9InlPb2n00Qdtqz0RHN9JR2m-MYRYoMc_u1pVta5X5abQYfDHKT5CFYB2Mh9DMSVO1cHi-MAeHu1sUqJgXmTHWWcPHxLP5B-r21YxhI3tHE9tuDZegcXLTFq6iVaOLTUzcQLcXDxHXdimqYr0ckxDgqT-60FDUSWf8aIf1w7atO2gvw5A7gwpHn9RdUKmNzrMNetPoyk_6mpJdAvovkctHk1JAWHwWFeP0fkgHRIWx1xpy7_RUikjI1Y0k0IrqUO9A-1qTXTDGs6wt7PJci-E732oPdW9o5O9FusQwxHQqg3y4GTnxyLqPKJAP1CVI_Te5Fs__n1nuzbHaLplZJ2Gmb-V_Uz32lELvnefKx1B1yVwyDdu-SMXRys9tA632HqOyeItCVGVkU9JHfzRhrxgrcXB9m8iDMSyB3IhSU8sIzeGacy6FMha3j-Lp11xHxZCFNmO3W4skU-UekC-FeTxSypT0Lhecqj1gSlOY3ohI8IOrwPNFW6ZH15FF7MtKp0xt9ThZ-8yknwEd-EJB-S2ueFuuSBgqsBzLymvaJvI0RTDtbDpWIlM1wVPp=w406-h558-s-no?authuser=0'},
@@ -32,10 +27,14 @@ const ArtGallery = () => {
   {id:21,img:'https://lh3.googleusercontent.com/YDzUoBZBytOXYs5n24dBrDf-lVx6m9kB0vHhV7GNO9VVne5d5Ui_MxF5i-98ITZoSthPwYnQJrAn039P8yPpbFhhjmSY09MHo0guiQNprFEO62CH5HeYK_M1L_4WRGu_M4tsiPtujENPuGsq6Mjd1O1R4MFmmCik3WQUzXuZB-whhwAuO0o5oF9tCi03hGykQKxmNVT1cBm5s_UNY1EXqlAu4aNux7Mgz60ztAvLMnDtpA55w3ZmpE1BrThBlWEaJYKML5mp2KwYmp8cH3nWJRiZEzH0MBPX-HQUW03qcEIombh8UkiRlJ159joKq5u0GSazPMu6YChp9oS5N5jnDwLowgPLFQnUOwHYizvDjZgfheP6a81outx64vfAj3oPULTERaMHt7e_4gNVZFYpwXnGN6GDUPta1GpB42jQYqhJLoGejSCnbQU7UXvkfpOPuLL0K-jB--KIiElbjL480w8QkVwUS6fuumh7eUJCLYJ4fst9BAP4oCMpnk4gH4kqxuA8hyRcP7Gybq04Od1NQNdAT7wNa7nYaZvLIevE0tSRk9-cQ7xWMGE4xv8Rh3fqqV90sGwl3LLYOZxTRhjKOgl4TXAc5qZP9mM5vJczA2-2D1SS_ZUFG-5KbGK9RVUGDFVU78dDKYugj4F_geA5yFGfUYSuZWH-YyCzMNFcpz7imNHBy7R2Bccw79f7z3c8SVloUadUXOOZO4OD3ZsMH1A1nhD4UIx9j_9rHlD9Q5dXG8C-wALdSiNAY_F3ZDt8WJ-GFn8_AW2tMN4u5S9TFfKREgaLHZfkHzdcDlaNMi9UUZVoPECsL_Jd9VwT_4esJ20W6cyklsdG--BEN4ieJC5_zEcGTHoVod8fWyR4YPpUmBnfHddDAT1ss72WQY8UIXbWypO-VJ2ScMVfJ-uo1s4XYwyfUt8zMIgmF8ZE_7-J7T0tJH--G6S8Yp5K_B7CZH0QrSVzorYqokoOG5GDHjykV_9I2Ifn_A3eTo53L2X17rPV7QAAxLDM=w395-h558-s-no?authuser=0'},
 
 ])
-const [active,setActive]= useState(false)
-useEffect(()=>{
-  window.scrollTo(0,0);
-})
+  const [currentPage,setCurrentPage] = useState(1)
+  const [artsPerPage] = useState(12)
+  const {darkMode} = useContext(ThemeContext)
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [active,setActive]= useState(false)
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  })
   const lastArtIndex = currentPage * artsPerPage
   const firstArtIndex = lastArtIndex - artsPerPage
   const currentArt = arts.slice(firstArtIndex,lastArtIndex)
@@ -45,7 +44,7 @@ useEffect(()=>{
       window.scrollTo({ behavior: 'smooth', top: 0 })
     }
 
-     const [selectedImage, setSelectedImage] = useState(null);
+  
 
   const handleClick = (image) => {
     setSelectedImage(image);
@@ -54,7 +53,7 @@ useEffect(()=>{
   const handleClose = () => {
     setSelectedImage(null);
   };
-  const {darkMode} = useContext(ThemeContext)
+  
   return (
     
     <div>

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import MorePosts from '../MorePosts/MorePosts'
 import Video1 from '../VideoPlayer/Video1'
-import NavBar from '../NavBar/NavBar';
 
 function Article3() {
     useEffect(()=>{
@@ -11,12 +10,12 @@ function Article3() {
     <div>
         
      <div className="Article3">
-        <div className="facts7_main">
+        <div className="article_main">
 
-          <div className="facts7_title">
+          <div className="article_title">
             <h2>Повість “Розмахом могутніх крил”</h2>
           </div>
-          <div className="facts7_info">
+          <div className="article_info">
             <div className="time">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                 <path d="M14.2842 13.9487C14.8081 14.1233 15.3744 13.8402 15.5491 13.3162C15.7237 12.7923 15.4406 12.226 14.9166 12.0513L14.2842 13.9487ZM11.0004 11.8H10.0004C10.0004 12.2304 10.2758 12.6126 10.6842 12.7487L11.0004 11.8ZM12.0004 6.78226C12.0004 6.22997 11.5527 5.78226 11.0004 5.78226C10.4481 5.78226 10.0004 6.22997 10.0004 6.78226H12.0004ZM14.9166 12.0513L11.3166 10.8513L10.6842 12.7487L14.2842 13.9487L14.9166 12.0513ZM12.0004 11.8V6.78226H10.0004V11.8H12.0004ZM19.6004 10.6C19.6004 15.3496 15.75 19.2 11.0004 19.2V21.2C16.8546 21.2 21.6004 16.4542 21.6004 10.6H19.6004ZM11.0004 19.2C6.25074 19.2 2.40039 15.3496 2.40039 10.6H0.400391C0.400391 16.4542 5.14617 21.2 11.0004 21.2V19.2ZM2.40039 10.6C2.40039 5.85035 6.25074 2 11.0004 2V0C5.14617 0 0.400391 4.74578 0.400391 10.6H2.40039ZM11.0004 2C15.75 2 19.6004 5.85035 19.6004 10.6H21.6004C21.6004 4.74578 16.8546 0 11.0004 0V2Z" fill="white"/>
@@ -47,7 +46,7 @@ function Article3() {
         </div>
       </div>
 
-        <div className="article_info">
+        <div className="article_main">
             <div className="video"><Video1></Video1></div>
             
             <h2 className='name_title'>Віталій Руденький</h2>

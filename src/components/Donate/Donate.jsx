@@ -1,6 +1,5 @@
 import React from 'react'
 import './Donate.css'
-import NavBar from '../NavBar/NavBar'
 import MyButton from '../UI/MyButton/MyButton'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
