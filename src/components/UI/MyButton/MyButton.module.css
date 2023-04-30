@@ -10,6 +10,7 @@
     border-radius: 37px;
     border: none;
     transition: 0.4s;
+    cursor: pointer;
 }
 .myBtn:hover{
     background: #660000;
