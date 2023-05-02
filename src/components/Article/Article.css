@@ -33,7 +33,6 @@
     color: white;
 }
 .article_main{
-    width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,11 +90,7 @@
     margin-top: 50px;
     
 }
-.article_main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 .article_main img{
     margin-top: 50px;
 

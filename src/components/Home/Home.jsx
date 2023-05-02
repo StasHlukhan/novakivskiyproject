@@ -10,10 +10,12 @@ import MyButton from '../UI/MyButton/MyButton';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next'
 
 const images = [carousel7, carousel2, carousel3, carousel1, carousel5, carousel6, carousel4];
 
 const Home = () => {
+  const { t, i18n } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -45,19 +47,17 @@ const Home = () => {
         style={{ backgroundImage: `url(${images[activeIndex]})` }}
       >
         <div className="hero">
-          <h2>Арт-галерея Новаківського</h2>
+          <h2>{t("art_gallery_novakiv")}</h2>
           <p className="hero_info">
-            Талановитим і темпераментним експонентом краківського постімпресіонізму був уродженець
-            зазбручанського Поділля Олекса Новаківський. Учень Яна Матейка, Унежицького й Леона
-            Вичулковського, він дуже багато завдячував Мальчевському.{' '}
+          {t("novakiv_info")}
           </p>
           <div className="hero_buttons">
             <MyButton>
               {' '}
-              <Link to="/donate">Донат</Link>{' '}
+              <Link to="/donate">{t("donate")}</Link>{' '}
             </MyButton>
             <MyButton>
-              <Link to="/art_gallery">Арт галерея</Link>{' '}
+              <Link to="/art_gallery">{t("art_gallery")}</Link>{' '}
             </MyButton>
           </div>
         </div>

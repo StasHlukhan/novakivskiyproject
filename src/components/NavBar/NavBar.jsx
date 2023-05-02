@@ -5,12 +5,15 @@ import LanguagePicker from '../UI/LanguagePicker/LanguagePicker'
 import { useContext } from 'react'
 import { ThemeContext } from '../../Context/ThemeContext'
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+
 const NavBar = () => {
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked")
   const [menu_class, setMenuClass] = useState("menu hidden")
   const [isMenuClicked, setIsMenuClicked] = useState(false)
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
-
+  const { t, i18n } = useTranslation();
+  
   const [checked, setChecked] = useState(
     JSON.parse(localStorage.getItem("darkMode")) || false
   );
@@ -42,21 +45,21 @@ const NavBar = () => {
           <NavLink onClick={()=> window.scrollTo({ behavior: 'smooth', top: 0 })} to='/'className={darkMode ? "logo dark-mode-link" : "logo"}>Новаківський SPACE</NavLink>
           <div className="nav_elem">
           <NavLink  onClick={()=> window.scrollTo({ behavior: 'smooth', top: 0 })} to="/" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
-            Головна
+          {t("main")}
           </NavLink>
           <NavLink onClick={()=> window.scrollTo({ behavior: 'smooth', top: 0 })} to="/art_gallery" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
-            Арт галерея
+          {t("art_gallery")}
           </NavLink>
           <NavLink  onClick={()=> window.scrollTo({ behavior: 'smooth', top: 0 })}to="/posts" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
-            Медіа
+          {t("media")}
           </NavLink>
           <NavLink onClick={()=> window.scrollTo({ behavior: 'smooth', top: 0 })} to="/donate" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
-            Донат
+          {t("donate")}
           </NavLink>
         </div>
           <div className="ui_buttons" >
             <div className="switch_ui">
-              <span className={darkMode ? "switch_name dark-mode-link" : "switch_name"}>Темна</span>
+              <span className={darkMode ? "switch_name dark-mode-link" : "switch_name"}>{t("dark")}</span>
               <label className="switch">
               <input type="checkbox" checked={checked} onChange={() => {
                 toggleDarkMode();
@@ -64,7 +67,7 @@ const NavBar = () => {
               }} />
                 <span className="slider round"></span>
               </label>
-              <span className={darkMode ? "switch_name dark-mode-link" : "switch_name"}>Тема</span>
+              <span className={darkMode ? "switch_name dark-mode-link" : "switch_name"}>{t("theme")}</span>
             </div>
             
             
@@ -84,16 +87,16 @@ const NavBar = () => {
           <div className="nav_mobile">
           
             <NavLink onClick={updateMenu}  to="/" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
-              Головна
+            {t("main")}
             </NavLink>
             <NavLink onClick={updateMenu} to="/art_gallery" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
-              Арт галерея
+            {t("art_gallery")}
             </NavLink>
             <NavLink onClick={updateMenu} to="/posts" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
-              Медіа
+            {t("media")}
             </NavLink>
             <NavLink onClick={updateMenu} to="/donate" className={darkMode ? "nav_link dark-mode-link" : "nav_link"} activeclassname="active">
-              Донат
+            {t("donate")}
             </NavLink>
         
           
