@@ -1,13 +1,16 @@
 import React from 'react';
 import './MainPage.css';
-import MapRoad from '../MapRoad/MapRoad';
-import Home from '../Home/Home';
+import MapRoad from '../../components/MapRoad/MapRoad';
+import Home from '../../components/Home/Home';
+import TimeLine from '../../components/TimeLine/TimeLine';
 
 function MainPage() {
   return (
     <>
       <Home></Home>
       <MapRoad></MapRoad>
+       
+     
     </>
   );
 }

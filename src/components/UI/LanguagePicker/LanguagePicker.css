@@ -29,14 +29,21 @@
     font-weight: bold;
     margin-right: 10px;
   }
-  
+  .dark-mode{
+    background: rgba(33, 33, 33, 0.8);
+    color: white;
+  }
+  .white-mode{
+    background-color: white;
+    color: #4C4C4C;
+  }
   .language-picker__dropdown {
     position: absolute;
     top: calc(100% + 8px);
     left: 0;
     width: 100px;
     padding: 8px 0;
-    background-color: #fff;
+   
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     opacity: 0;
@@ -63,7 +70,7 @@
     padding: 8px 16px;
     font-size: 16px;
     line-height: 1.5;
-    color: #333;
+    
     text-align: left;
     transition: background-color 0.2s ease-in-out;
   }

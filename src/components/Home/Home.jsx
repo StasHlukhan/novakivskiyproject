@@ -17,7 +17,12 @@ const images = [carousel7, carousel2, carousel3, carousel1, carousel5, carousel6
 const Home = () => {
   const { t, i18n } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
-
+  useEffect(() => {
+    images.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+    });
+  }, []);
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => {

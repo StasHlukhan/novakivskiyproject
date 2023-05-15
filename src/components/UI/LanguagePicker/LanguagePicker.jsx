@@ -3,11 +3,13 @@ import './LanguagePicker.css';
 import ENG from '../../../img/England (GB-ENG).png';
 import UA from '../../../img/Ukraine (UA).png';
 import { useTranslation } from 'react-i18next';
+import { useContext } from 'react'
+import { ThemeContext } from '../../../Context/ThemeContext';
 const LanguagePicker = () => {
   const { t, i18n } = useTranslation();
   const [isLanguagePickerOpen, setIsLanguagePickerOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(UA);
-
+  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
   const handleLanguagePickerClick = () => {
     setIsLanguagePickerOpen(!isLanguagePickerOpen);
   };
@@ -41,15 +43,16 @@ const LanguagePicker = () => {
         </svg>
       </button>
       <div
-        className={`language-picker__dropdown ${
-          isLanguagePickerOpen ? 'language-picker__dropdown--visible' : ''
-        }`}
+    
+    className={`language-picker__dropdown ${
+      isLanguagePickerOpen ? 'language-picker__dropdown--visible' : ''
+    } ${darkMode ? 'dark-mode' : 'white-mode'}`}
       >
-        <button className="language-picker__option" onClick={() => changeLanguage('ua')}>
+        <button className= {darkMode ? "language-picker__option dark-mode" : "language-picker__option"} onClick={() => changeLanguage('ua')}>
           <img src={UA} alt="" />
           UA
         </button>
-        <button className="language-picker__option" onClick={() => changeLanguage('en')}>
+        <button className= {darkMode ? "language-picker__option dark-mode" : "language-picker__option"} onClick={() => changeLanguage('en')}>
           <img src={ENG} alt="" />
           ENG
         </button>

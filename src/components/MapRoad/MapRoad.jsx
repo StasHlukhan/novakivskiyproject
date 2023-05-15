@@ -119,7 +119,7 @@ function MapRoad() {
 
       <div className="title">
         <div className="main_title show_up element-animation">
-          <h2>Krakow Academy of Fine Arts.</h2>
+          <h2>{t('title1')}</h2>
         </div>
       </div>
 
@@ -162,7 +162,7 @@ function MapRoad() {
 
         <div className="title">
           <div className="main_title show_up element-animation">
-            <h2>Novakivskyi's muse Creative life and new acquaintances</h2>
+            <h2>{t('title2')}</h2>
           </div>
         </div>
 
@@ -238,11 +238,11 @@ function MapRoad() {
             </div>
           </div>
           <div className="right_side2">
-            <div className="img ">
+            <div className="img extra_hide_margin_top ">
               <img src={Lazarus} alt="" />
               <p className="caption">{t('cap15')}</p>
             </div>
-            <div className="img low_margin_top">
+            <div className="img extra_margin_top">
               <img src={Heart_s} alt="" />
               <p className="caption">
               {t('cap16')}
@@ -298,8 +298,8 @@ function MapRoad() {
         <div className="main_title show_up element-animation">
           <h2>
             {' '}
-            <span>Opening of an art school.</span> <span>Secret University.</span>{' '}
-            <span>Exhibitions</span>{' '}
+            <span>{t('title3/1')}</span> <span>{t('title3/2')}</span>{' '}
+            <span>{t('title3/3')}</span>{' '}
           </h2>
         </div>
       </div>
@@ -449,8 +449,8 @@ function MapRoad() {
         <div className="main_title show_up element-animation extra_tit_hide_margin_top">
           <h2>
             {' '}
-            <span> The last work.</span> <span> The last days of life</span>{' '}
-            <span>and the afterlife</span>{' '}
+            <span>{t("title4/1")} </span> <span>{t("title4/2")} </span>{' '}
+            <span>{t("title4/3")}</span>{' '}
           </h2>
         </div>
       </div>
